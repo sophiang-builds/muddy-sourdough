@@ -46,16 +46,37 @@ struct TranscriptionPipeline {
 
         var options = DecodingOptions()
         options.task = .transcribe
-        if config.language != "auto" { options.language = config.language }
+        if config.language != "auto" {
+            options.language = config.language
+            // Force the language token through the decoder prefill — without
+            // this Whisper can still auto-detect and override the setting.
+            options.usePrefillPrompt = true
+        }
+        NSLog("MeetingScribe: transcribing with model=%@ language=%@",
+              config.whisperModel, config.language)
 
-        progress("Transcribing your microphone track…")
+        progress("Transcribing your microphone track (\(config.language))…")
         let micSegments = try await transcribe(whisper, path: micURL.path, options: options)
 
-        progress("Transcribing the meeting audio…")
-        let systemSegments = try await transcribe(whisper, path: systemURL.path, options: options)
-
         progress("Separating speakers…")
-        let turns = try await diarize(systemURL)
+        // nil = diarizer unavailable (still transcribe, single speaker);
+        // []  = diarizer ran and found no remote speech (skip the track —
+        //       Whisper hallucinates text like "Thank you." or URLs on silence).
+        let turnsResult = await diarize(systemURL)
+        let turns = turnsResult ?? []
+
+        var systemSegments: [Segment] = []
+        if turnsResult == nil || !turns.isEmpty {
+            progress("Transcribing the meeting audio (\(config.language))…")
+            systemSegments = try await transcribe(whisper, path: systemURL.path, options: options)
+        }
+        if !turns.isEmpty {
+            // Drop Whisper segments that overlap no diarized speech at all —
+            // those are hallucinations on silent or music-only stretches.
+            systemSegments = systemSegments.filter { seg in
+                turns.contains { min(seg.end, $0.end) - max(seg.start, $0.start) > 0.2 }
+            }
+        }
 
         var lines: [TranscriptLine] = []
         for seg in micSegments {
@@ -109,7 +130,9 @@ struct TranscriptionPipeline {
 
     private struct SpeakerTurn { let speaker: String; let start: TimeInterval; let end: TimeInterval }
 
-    private func diarize(_ url: URL) async throws -> [SpeakerTurn] {
+    /// nil = diarizer failed or file missing (caller should still transcribe,
+    /// falling back to one speaker); [] = diarizer ran and found no speech.
+    private func diarize(_ url: URL) async -> [SpeakerTurn]? {
         guard FileManager.default.fileExists(atPath: url.path) else { return [] }
         do {
             let manager = OfflineDiarizerManager(config: OfflineDiarizerConfig())
@@ -124,7 +147,7 @@ struct TranscriptionPipeline {
             // Diarization failing shouldn't sink the whole transcript —
             // fall back to a single "S1" remote speaker.
             NSLog("MeetingScribe: diarization failed, using single speaker: %@", error.localizedDescription)
-            return []
+            return nil
         }
     }
 
