@@ -30,6 +30,14 @@ struct Config: Codable {
     /// Empty = use your macOS account full name.
     var myName: String
 
+    /// Optional text used to seed Whisper's context before decoding.
+    /// Whisper mimics the style of this prompt — for Cantonese, a colloquial
+    /// 口語 sentence here biases output toward written Cantonese (唔/嘅/嘢)
+    /// instead of Standard Written Chinese. When unset and language is "yue",
+    /// a built-in colloquial seed is used automatically.
+    /// (Optional so configs saved by older versions still load.)
+    var initialPrompt: String?
+
     static let `default` = Config(
         emailShortcutMap: [
             "sophia@asynk.ai": "asynk",
@@ -40,7 +48,8 @@ struct Config: Codable {
         whisperModel: "large-v3-v20240930_turbo",
         leadMinutes: 2,
         keepAudioFiles: false,
-        myName: ""
+        myName: "",
+        initialPrompt: nil
     )
 
     var resolvedMyName: String {

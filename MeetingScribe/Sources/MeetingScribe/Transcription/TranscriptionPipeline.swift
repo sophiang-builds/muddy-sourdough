@@ -1,4 +1,5 @@
 import Foundation
+import AVFoundation
 import WhisperKit
 import FluidAudio
 
@@ -52,29 +53,48 @@ struct TranscriptionPipeline {
             // this Whisper can still auto-detect and override the setting.
             options.usePrefillPrompt = true
         }
+        // Whisper mimics the style of its context prompt. For Cantonese this
+        // is the lever that pulls output toward colloquial 粵文 instead of
+        // Standard Written Chinese (its subtitle-heavy training default).
+        let promptText = config.initialPrompt
+            ?? (config.language == "yue"
+                ? "喂，早晨，我哋今日開會傾吓個project先。你哋聽唔聽到我講嘢呀？冇問題嘅話我哋開始啦。"
+                : nil)
+        if let promptText, let tokenizer = whisper.tokenizer {
+            let tokens = tokenizer.encode(text: " " + promptText)
+                .filter { $0 < tokenizer.specialTokens.specialTokenBegin }
+            if !tokens.isEmpty { options.promptTokens = tokens }
+        }
         NSLog("MeetingScribe: transcribing with model=%@ language=%@",
               config.whisperModel, config.language)
 
         progress("Transcribing your microphone track (\(config.language))…")
         let micSegments = try await transcribe(whisper, path: micURL.path, options: options)
 
-        progress("Separating speakers…")
-        // nil = diarizer unavailable (still transcribe, single speaker);
-        // []  = diarizer ran and found no remote speech (skip the track —
-        //       Whisper hallucinates text like "Thank you." or URLs on silence).
-        let turnsResult = await diarize(systemURL)
-        let turns = turnsResult ?? []
-
         var systemSegments: [Segment] = []
-        if turnsResult == nil || !turns.isEmpty {
-            progress("Transcribing the meeting audio (\(config.language))…")
-            systemSegments = try await transcribe(whisper, path: systemURL.path, options: options)
-        }
-        if !turns.isEmpty {
-            // Drop Whisper segments that overlap no diarized speech at all —
-            // those are hallucinations on silent or music-only stretches.
-            systemSegments = systemSegments.filter { seg in
-                turns.contains { min(seg.end, $0.end) - max(seg.start, $0.start) > 0.2 }
+        var turns: [SpeakerTurn] = []
+        if Self.isEffectivelySilent(systemURL) {
+            // Nothing played through the speakers (typical for an ad-hoc test).
+            // Whisper hallucinates text like "Thank you." or URLs when fed
+            // silence, so skip the track entirely.
+            NSLog("MeetingScribe: system track is silent — skipping it")
+        } else {
+            progress("Separating speakers…")
+            // nil = diarizer unavailable (still transcribe, single speaker);
+            // []  = diarizer ran and found no remote speech (skip the track).
+            let turnsResult = await diarize(systemURL)
+            turns = turnsResult ?? []
+
+            if turnsResult == nil || !turns.isEmpty {
+                progress("Transcribing the meeting audio (\(config.language))…")
+                systemSegments = try await transcribe(whisper, path: systemURL.path, options: options)
+            }
+            if !turns.isEmpty {
+                // Drop Whisper segments that overlap no diarized speech at
+                // all — hallucinations on silent or music-only stretches.
+                systemSegments = systemSegments.filter { seg in
+                    turns.contains { min(seg.end, $0.end) - max(seg.start, $0.start) > 0.2 }
+                }
             }
         }
 
@@ -104,6 +124,34 @@ struct TranscriptionPipeline {
             }
         }
         return Transcript(lines: merged)
+    }
+
+    // MARK: - Silence detection
+
+    /// True when the file's RMS level is below roughly -66 dBFS — i.e. no one
+    /// ever actually played audio on this track.
+    private static func isEffectivelySilent(_ url: URL) -> Bool {
+        guard let file = try? AVAudioFile(forReading: url), file.length > 0 else { return true }
+        let format = file.processingFormat
+        let chunkFrames: AVAudioFrameCount = 65536
+        guard let buffer = AVAudioPCMBuffer(pcmFormat: format, frameCapacity: chunkFrames) else { return false }
+
+        var sumSquares: Double = 0
+        var sampleCount: Double = 0
+        while file.framePosition < file.length {
+            guard (try? file.read(into: buffer, frameCount: chunkFrames)) != nil,
+                  buffer.frameLength > 0,
+                  let channel = buffer.floatChannelData?[0] else { break }
+            for i in 0..<Int(buffer.frameLength) {
+                let sample = Double(channel[i])
+                sumSquares += sample * sample
+            }
+            sampleCount += Double(buffer.frameLength)
+        }
+        guard sampleCount > 0 else { return true }
+        let rms = (sumSquares / sampleCount).squareRoot()
+        NSLog("MeetingScribe: system track RMS = %f", rms)
+        return rms < 0.0005
     }
 
     // MARK: - Whisper
