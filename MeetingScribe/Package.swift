@@ -4,7 +4,10 @@ import PackageDescription
 let package = Package(
     name: "MeetingScribe",
     platforms: [
-        .macOS(.v14)
+        // 14.2, not just 14.0 — the Core Audio process-tap APIs used for
+        // system audio capture (AudioHardwareCreateProcessTap etc.) only
+        // exist from 14.2 onward.
+        .macOS("14.2")
     ],
     dependencies: [
         .package(url: "https://github.com/argmaxinc/WhisperKit.git", from: "0.9.0"),
