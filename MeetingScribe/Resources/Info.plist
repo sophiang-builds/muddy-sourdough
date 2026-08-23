@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleExecutable</key>
+    <string>MeetingScribe</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.sophia.meetingscribe</string>
+    <key>CFBundleName</key>
+    <string>MeetingScribe</string>
+    <key>CFBundleDisplayName</key>
+    <string>MeetingScribe</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.4</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>MeetingScribe records your microphone during meetings so your own speech can be transcribed and labeled as you.</string>
+    <key>NSAudioCaptureUsageDescription</key>
+    <string>MeetingScribe captures system audio during meetings so the other participants can be transcribed.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>MeetingScribe reads your calendar to offer transcription when a meeting is about to start and to list attendees.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>MeetingScribe saves finished transcripts into Apple Notes.</string>
+</dict>
+</plist>
