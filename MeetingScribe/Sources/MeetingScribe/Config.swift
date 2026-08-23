@@ -38,6 +38,11 @@ struct Config: Codable {
     /// (Optional so configs saved by older versions still load.)
     var initialPrompt: String?
 
+    /// Convert transcript text to Hong Kong-standard Traditional Chinese
+    /// (fixes Whisper's habit of mixing in Simplified characters).
+    /// Defaults to on when unset. English text is unaffected.
+    var traditionalChinese: Bool?
+
     static let `default` = Config(
         emailShortcutMap: [
             "sophia@asynk.ai": "asynk",
@@ -49,7 +54,8 @@ struct Config: Codable {
         leadMinutes: 2,
         keepAudioFiles: false,
         myName: "",
-        initialPrompt: nil
+        initialPrompt: nil,
+        traditionalChinese: true
     )
 
     var resolvedMyName: String {

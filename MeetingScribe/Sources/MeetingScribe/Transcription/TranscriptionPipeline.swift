@@ -2,6 +2,7 @@ import Foundation
 import AVFoundation
 import WhisperKit
 import FluidAudio
+import OpenCC
 
 /// One utterance in the merged transcript.
 struct TranscriptLine: Identifiable {
@@ -121,6 +122,18 @@ struct TranscriptionPipeline {
                 )
             } else {
                 merged.append(line)
+            }
+        }
+
+        // Normalize any Simplified characters Whisper mixed in to Hong Kong-
+        // standard Traditional. Deterministic, character-level — English and
+        // already-Traditional text pass through unchanged.
+        if config.traditionalChinese ?? true,
+           let converter = try? ChineseConverter(options: [.traditionalize, .hkStandard]) {
+            merged = merged.map {
+                TranscriptLine(start: $0.start, end: $0.end,
+                               speakerKey: $0.speakerKey,
+                               text: converter.convert($0.text))
             }
         }
         return Transcript(lines: merged)
