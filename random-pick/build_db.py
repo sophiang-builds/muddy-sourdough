@@ -308,8 +308,27 @@ def parse(text):
 def strip(n):
     return {"name": n["name"], **({"children": [strip(c) for c in n["children"]]} if n["children"] else {})}
 
+def parse_compact(path):
+    """Category | Facet: a, b, c | Facet: d, e"""
+    cats = []
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        name, *facets = [x.strip() for x in line.split("|")]
+        kids = []
+        for f in facets:
+            fname, items = f.split(":", 1)
+            kids.append({"name": fname.strip(), "children": [{"name": i.strip()[0].upper() + i.strip()[1:]} for i in items.split(",") if i.strip()]})
+        cats.append({"name": name, "children": kids})
+    return cats
+
 if __name__ == "__main__":
     data = [strip(n) for n in parse(TREE)]
+    data += parse_compact(pathlib.Path(__file__).with_name("more_categories.txt"))
+    names = [c["name"] for c in data]
+    dupes = {n for n in names if names.count(n) > 1}
+    assert not dupes, f"duplicate categories: {dupes}"
     out = pathlib.Path(__file__).with_name("categories.json")
     out.write_text(json.dumps(data, ensure_ascii=False, indent=1))
     def leaves(n): return 1 if "children" not in n else sum(leaves(c) for c in n["children"])

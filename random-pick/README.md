@@ -1,7 +1,8 @@
-# Pick for Me
+# Try Your Luck
 
-A random picker for creative prompts. Choose up to three categories, tap Pick, and push any card one layer deeper.
+Tap Pick for me and up to three glass squares land on something random to do, picked from a fixed list of 123 categories and about 1,400 options.
 
-- `build_db.py` holds the category tree as indented text. Edit it, then run `python3 build_db.py` to regenerate `categories.json`.
-- `picker.py` picks from the command line using Python's `secrets`. Run `python3 picker.py --test` to check the picks are even.
-- `index.html` is the phone app. It uses `crypto.getRandomValues` with rejection sampling, the browser's equivalent of `secrets`. Serve the folder (for example with GitHub Pages) and use Safari's Share > Add to Home Screen on iPhone.
+- `build_db.py` holds the deep category tree; `more_categories.txt` adds the rest, one line per category. Run `python3 build_db.py` to regenerate `categories.json`.
+- `picker.py` picks from the command line with Python's `secrets`. `python3 picker.py --test` checks the picks are even.
+- `index.html` is the web app (Liquid Glass look, iPhone 15 frame on wider screens). It picks with `crypto.getRandomValues` and rejection sampling. Host the folder (for example GitHub Pages), open it in Safari and use Share > Add to Home Screen.
+- `ios/TryYourLuck/` is the native SwiftUI app using Apple's real Liquid Glass APIs. See its README.

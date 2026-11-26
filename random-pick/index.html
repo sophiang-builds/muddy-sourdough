@@ -1,174 +1,264 @@
 <meta charset="utf-8">
-<title>Pick for Me</title>
+<title>Try Your Luck</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Pick for Me">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Try Your Luck">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#FBF5EE">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* VOICE everyday, a party toy for friends
-   IDEA a stack of drawn cards: each category deals one, you can push it one layer deeper
-   PICTURE the dealt cards themselves, large, with the path showing how deep you went
-   COLOUR white ground, jomud blue leads, peach and lilac tint the cards
-   TYPE Inter Light display + Nunito Sans text (jomud house pair)
-   LAYOUT one column, chips on top, cards in the middle, a big pick button pinned to the bottom */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1220);--ink:light-dark(#1D1F24,#eef1f7);--muted:light-dark(#6b707a,#9aa1ae);--line:light-dark(#E9E4DE,#262d3d);--brand:light-dark(#0F66DB,#5c9bff);--onbrand:#fff;--peach:light-dark(#FDEDE2,#3a2418);--peachink:light-dark(#b4501c,#ffb184);--lilac:light-dark(#F1EDFD,#271d40);--lilacink:light-dark(#6a32cc,#c5a8ff);--blue:light-dark(#EEF4FE,#14244a);--blueink:light-dark(#0F66DB,#8db8ff)}
+/* VOICE occasion, a party toy played with friends, quiet until you tap
+   IDEA an iOS 26 Liquid Glass screen: glass squares floating over the jomud colour wash
+   PICTURE the 1 to 3 glass squares themselves, centred, landing on a pick like a slot reel
+   COLOUR cream ground with peach, lilac and jomud blue light behind the glass; blue for the one action
+   TYPE SF Pro on iPhone (system-ui), Inter as the stand-in elsewhere
+   LAYOUT phone: tiny title, squares and Pick centred, count switch above the home bar; wider: the same screen inside an iPhone 15 frame */
+:root{color-scheme:light dark;--bg:light-dark(#FBF5EE,#0A0E1F);--ink:light-dark(#16181D,#F2F4F8);--muted:light-dark(rgba(22,24,29,.55),rgba(242,244,248,.6));--brand:light-dark(#0F66DB,#3D86F5);--peach:#F07A3A;--lilac:#7A3FE0;--rose:#E8506A;--sky:#3273F2;--gfill:light-dark(rgba(255,255,255,.22),rgba(255,255,255,.07));--ghi:light-dark(rgba(255,255,255,.9),rgba(255,255,255,.38));--glo:light-dark(rgba(255,255,255,.35),rgba(255,255,255,.1));--gshadow:light-dark(rgba(40,25,80,.22),rgba(0,0,0,.5));--blob:light-dark(.85,.55);--stage:light-dark(#E9E6EF,#05070F)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito Sans","Inter",system-ui,sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
-.app{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;padding-top:max(20px,env(safe-area-inset-top,0px));padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px));padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
-.mark{font:600 17px/1 "Inter",sans-serif;color:var(--brand);letter-spacing:-.02em}
-h1{font:300 clamp(34px,9vw,46px)/1.05 "Inter",sans-serif;letter-spacing:-.02em;margin:10px 0 4px}
-.sub{color:var(--muted);margin:0 0 18px;font-size:15px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{font:inherit;font-size:15px;min-height:44px;padding:0 16px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
-.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:var(--onbrand)}
-.chip:focus-visible,.btn:focus-visible,.go:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 45%,transparent);outline-offset:2px}
-.hint{min-height:22px;margin:8px 0 6px;font-size:14px;color:var(--muted)}
-.cards{display:grid;gap:12px}
-.card{border-radius:22px;padding:18px 18px 14px;background:var(--blue);color:var(--blueink)}
-.card.t1{background:var(--peach);color:var(--peachink)}
-.card.t2{background:var(--lilac);color:var(--lilacink)}
-.path{font-size:14px;display:flex;flex-wrap:wrap;gap:4px 6px;opacity:.9}
-.path span+span::before{content:"\203A";margin-right:6px;opacity:.6}
-.big{font:300 clamp(28px,8vw,38px)/1.08 "Inter",sans-serif;letter-spacing:-.02em;color:var(--ink);margin:8px 0 14px;overflow-wrap:anywhere}
-.big.spin{opacity:.45}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.btn{font:inherit;font-size:15px;font-weight:700;min-height:44px;padding:0 16px;border-radius:22px;border:0;cursor:pointer;background:color-mix(in srgb,currentColor 14%,transparent);color:inherit}
-.btn:disabled{opacity:.4;cursor:default}
-.depth{margin-left:auto;font-size:13px;opacity:.8;white-space:nowrap}
-.empty{border:1.5px dashed var(--line);border-radius:22px;padding:28px 18px;color:var(--muted);text-align:center}
-.dock{position:fixed;left:0;right:0;bottom:0;padding:14px max(5vw,16px) calc(14px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,var(--bg) 30%)}
-.go{display:block;width:100%;max-width:560px;margin:0 auto;font:600 19px/1 "Inter",sans-serif;min-height:60px;border-radius:30px;border:0;background:var(--brand);color:var(--onbrand);cursor:pointer;transition:transform .1s}
-.go:active{transform:scale(.98)}
-.foot{margin-top:18px;font-size:13px;color:var(--muted)}
-@media(prefers-reduced-motion:reduce){.go,.chip{transition:none}}
+body{margin:0;background:var(--stage);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",system-ui,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+
+/* stage + iPhone 15 frame (393 x 852 pt screen) */
+.stage{height:100%;display:grid;place-items:center;overflow:hidden}
+.device{zoom:var(--s,1);width:417px;height:876px;padding:12px;border-radius:67px;background:linear-gradient(145deg,#3a3d44,#17181c 40%,#2b2d33);box-shadow:0 0 0 2px #55585f,0 40px 80px -20px rgba(0,0,0,.45),inset 0 0 0 1.5px #0c0c0e}
+.screen{position:relative;width:393px;height:852px;border-radius:55px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column;--top:59px;--bot:34px}
+.status{position:absolute;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:4px 34px 0 52px;font:600 17px/1 -apple-system,"SF Pro Text","Inter",sans-serif;z-index:5}
+.status svg{fill:var(--ink)}
+.island{position:absolute;top:11px;left:50%;width:126px;height:37px;margin-left:-63px;border-radius:20px;background:#000;z-index:6}
+.homebar{position:absolute;bottom:8px;left:50%;width:134px;height:5px;margin-left:-67px;border-radius:3px;background:var(--ink);opacity:.85;z-index:6}
+@media (max-width:440px){
+  body{background:var(--bg)}
+  .device{zoom:1;width:100%;height:100%;padding:0;border-radius:0;background:none;box-shadow:none}
+  .screen{width:100%;height:100%;border-radius:0;--top:max(env(safe-area-inset-top,0px),20px);--bot:max(env(safe-area-inset-bottom,0px),16px)}
+  .status,.island,.homebar{display:none}
+}
+
+/* colour wash behind the glass */
+.wash{position:absolute;inset:-20%;pointer-events:none;opacity:var(--blob)}
+.wash i{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
+.wash i:nth-child(1){left:-6%;top:12%;background:radial-gradient(closest-side,var(--peach),transparent)}
+.wash i:nth-child(2){right:-4%;top:28%;background:radial-gradient(closest-side,var(--lilac),transparent)}
+.wash i:nth-child(3){left:14%;bottom:10%;background:radial-gradient(closest-side,var(--sky),transparent)}
+.wash i:nth-child(4){right:10%;top:2%;width:40%;background:radial-gradient(closest-side,var(--rose),transparent)}
+
+/* Liquid Glass */
+.glass{position:relative;isolation:isolate;background:var(--gfill);-webkit-backdrop-filter:blur(22px) saturate(185%);backdrop-filter:blur(22px) saturate(185%);box-shadow:inset 0 1.5px 0 var(--ghi),inset 1.5px 0 0 var(--glo),inset -1px 0 0 var(--glo),inset 0 -1px 0 var(--glo),0 18px 40px -14px var(--gshadow);transition:transform .35s cubic-bezier(.3,1.5,.5,1),background .2s}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;background:linear-gradient(155deg,rgba(255,255,255,.5),rgba(255,255,255,0) 34%,rgba(255,255,255,0) 72%,rgba(255,255,255,.16))}
+.glass.press:active{transform:scale(1.04)}
+
+/* layout inside the screen */
+.title{position:relative;z-index:2;margin:calc(var(--top) + 10px) 0 0;text-align:center;font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--muted)}
+.title{color:var(--ink)}
+.title svg{width:21px;height:21px;vertical-align:-5px;margin:0 0 0 2px}
+.middle{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:0 20px}
+.slots{width:100%;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:12px;transition:width .4s}
+.slots[data-n="1"]{width:86%}
+.cell{container-type:inline-size}
+.sq{position:relative;width:100%;aspect-ratio:1;border-radius:clamp(22px,11cqw,34px);display:flex;flex-direction:column;padding:9cqw;text-align:left;animation:pop .5s cubic-bezier(.3,1.5,.5,1)}
+.slots[data-n="1"] .sq{border-radius:38px}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.cap{font-size:clamp(10px,5.4cqw,14px);font-weight:600;color:var(--muted);line-height:1.25;display:flex;gap:6px;justify-content:space-between}
+.cap span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.big{flex:1;display:flex;align-items:safe center;font-weight:600;font-size:clamp(14px,12cqw,40px);line-height:1.08;letter-spacing:-.02em;hyphens:auto;overflow-wrap:break-word;overflow:hidden}
+.big.tick{animation:roll .09s ease-out}
+@keyframes roll{from{transform:translateY(-35%);opacity:.2;filter:blur(1.5px)}}
+.foot{position:absolute;right:7cqw;bottom:6cqw;height:clamp(12px,7cqw,18px);color:var(--muted)}
+.slots[data-n="3"] .sq{padding:9cqw 8cqw}
+.slots[data-n="3"] .cap span{-webkit-line-clamp:1}
+.slots[data-n="3"] .cap .f{display:none}
+.slots[data-n="3"] .big{font-size:13.5px;line-height:1.15;letter-spacing:-.01em}
+.foot svg{height:100%;width:auto}
+.sq.nope{animation:nope .4s}
+@keyframes nope{25%{transform:translateX(-6px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.pick{height:56px;padding:0 34px;border-radius:28px;font-size:18px;font-weight:600;color:#fff;--gfill:color-mix(in srgb,var(--brand) 88%,transparent);--ghi:rgba(255,255,255,.55);--glo:rgba(255,255,255,.18)}
+.count{position:relative;z-index:2;align-self:center;margin-bottom:calc(var(--bot) + 18px);display:flex;padding:4px;gap:2px;border-radius:24px}
+.count button{width:54px;height:40px;border-radius:20px;display:grid;place-items:center;color:var(--muted);transition:background .25s,color .25s}
+.count button[aria-pressed=true]{background:light-dark(rgba(255,255,255,.75),rgba(255,255,255,.18));color:var(--ink)}
+.count svg{height:12px;fill:currentColor}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 55%,transparent);outline-offset:3px}
+
+/* category sheet */
+.scrim{position:absolute;inset:0;z-index:8;background:rgba(0,0,0,.18)}
+.sheet{position:absolute;left:8px;right:8px;bottom:8px;height:68%;z-index:9;border-radius:38px;display:flex;flex-direction:column;padding:8px 16px 0;--gfill:light-dark(rgba(255,255,255,.62),rgba(30,32,44,.7));animation:up .35s cubic-bezier(.2,.9,.3,1)}
+@keyframes up{from{transform:translateY(105%)}}
+.grab{width:36px;height:5px;border-radius:3px;background:var(--muted);opacity:.5;margin:0 auto 10px}
+.shead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.shead b{font-size:17px}
+.done{font-weight:600;color:var(--brand);min-height:44px;padding:0 6px}
+.search{width:100%;font:inherit;font-size:16px;height:40px;border-radius:12px;border:0;padding:0 14px;background:light-dark(rgba(118,118,128,.14),rgba(118,118,128,.28));color:var(--ink);margin-bottom:8px}
+.list{flex:1;overflow-y:auto;margin:0 -16px;padding:0 16px calc(var(--bot) + 8px);-webkit-overflow-scrolling:touch}
+.list button{display:flex;width:100%;justify-content:space-between;align-items:center;min-height:46px;text-align:left;font-size:16px;border-bottom:.5px solid light-dark(rgba(0,0,0,.1),rgba(255,255,255,.12))}
+.list button[aria-current=true]{color:var(--brand);font-weight:600}
+@media (prefers-reduced-motion:reduce){.wash i,.glass{transition:none}.sq,.sheet,.big.tick{animation:none}}
 </style>
 
-<div class="app">
-  <div class="mark">jomud</div>
-  <h1>Pick for me</h1>
-  <p class="sub">Choose up to three categories, then let chance decide.</p>
-  <div class="chips" id="chips" role="group" aria-label="Categories"></div>
-  <div class="hint" id="hint" aria-live="polite"></div>
-  <div class="cards" id="cards" aria-live="polite"></div>
-  <p class="foot">Every pick comes from a fixed list using your phone's secure random generator, so nothing is chosen by AI and no option is favoured.</p>
+<div class="stage">
+  <div class="device">
+    <div class="screen" id="screen">
+      <div class="wash" id="wash"><i></i><i></i><i></i><i></i></div>
+      <div class="status"><span>9:41</span><span style="display:flex;gap:6px;align-items:center">
+        <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .4 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4zm0 3.6c1.3 0 2.6.5 3.5 1.4l1.3-1.3A6.7 6.7 0 0 0 8 4a6.7 6.7 0 0 0-4.8 1.9l1.3 1.3C5.4 6.3 6.7 5.8 8 5.8zm0 3.5a1.4 1.4 0 0 0-1 .4L8 11.9l1-2.2a1.4 1.4 0 0 0-1-.4z"/></svg>
+        <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="currentColor" opacity=".4" style="stroke:var(--ink)"/><rect x="2" y="2" width="17" height="9" rx="2.4"/><path d="M25 4.5v4a2 2 0 0 0 0-4z" opacity=".45"/></svg>
+      </span></div>
+      <div class="island"></div>
+
+      <h1 class="title" aria-label="Try your luck">Try <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 15.5H18a4 4 0 0 0 .6-7.95A6 6 0 0 0 7 6.6 4.5 4.5 0 0 0 6.5 15.5H8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.6 10.5l-3.8 6h3.6l-2 5.5 6.2-7.6h-3.7l2.4-3.9z" fill="var(--peach)"/></svg>our luck</h1>
+
+      <div class="middle">
+        <div class="slots" id="slots" data-n="1" style="--n:1"></div>
+        <button class="glass press pick" id="pick" disabled>Pick for me</button>
+      </div>
+
+      <div class="glass count" id="count" role="group" aria-label="How many picks">
+        <button data-n="1" aria-label="One square"><svg viewBox="0 0 12 12"><rect width="12" height="12" rx="3"/></svg></button>
+        <button data-n="2" aria-label="Two squares"><svg viewBox="0 0 26 12"><rect width="12" height="12" rx="3"/><rect x="14" width="12" height="12" rx="3"/></svg></button>
+        <button data-n="3" aria-label="Three squares"><svg viewBox="0 0 40 12"><rect width="12" height="12" rx="3"/><rect x="14" width="12" height="12" rx="3"/><rect x="28" width="12" height="12" rx="3"/></svg></button>
+      </div>
+      <div class="homebar"></div>
+      <div id="sheetHost"></div>
+    </div>
+  </div>
 </div>
-<div class="dock"><button class="go" id="go">Pick</button></div>
 
 <script>
 {
-  const MAX = 3;
-  // Unbiased integer in [0, n): rejection sampling over crypto.getRandomValues.
+  // Unbiased integer in [0, n) from the secure generator, by rejection sampling.
   const buf = new Uint32Array(1);
-  const randBelow = n => {
-    const limit = Math.floor(0x100000000 / n) * n;
-    let x;
-    do { crypto.getRandomValues(buf); x = buf[0]; } while (x >= limit);
-    return x % n;
-  };
+  const randBelow = n => { const lim = Math.floor(2 ** 32 / n) * n; let x; do { crypto.getRandomValues(buf); x = buf[0]; } while (x >= lim); return x % n; };
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  let DB = [];
-  let chosen = [];          // category names, in tap order
-  let results = {};         // name -> array of nodes from category down
-
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const $ = id => document.getElementById(id);
-  const cat = name => DB.find(c => c.name === name);
+  const ICON_DEEPER = '<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const ICON_LOCK = '<svg viewBox="0 0 24 24" style="height:1em;flex:none"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm2 0h6V7a3 3 0 0 0-6 0z" fill="currentColor"/></svg>';
 
-  const descend = (nodes, steps) => {
-    const out = nodes.slice();
-    for (let i = 0; i < steps; i++) {
-      const kids = out[out.length - 1].children;
-      if (!kids) break;
-      out.push(kids[randBelow(kids.length)]);
-    }
-    return out;
+  let DB = [], ALL = [];
+  // each slot: { path: [node,...] | null, lock: categoryName | null }
+  let slots = [{ path: null, lock: null }];
+  try { const n = +localStorage.getItem("tyl-n"); if (n >= 1 && n <= 3) slots = Array.from({ length: n }, () => ({ path: null, lock: null })); } catch (e) {}
+
+  const descend = (path, steps) => { const p = path.slice(); for (let i = 0; i < steps; i++) { const k = p[p.length - 1].children; if (!k) break; p.push(k[randBelow(k.length)]); } return p; };
+  const byName = n => DB.find(c => c.name === n);
+
+  // Different categories across squares in one pick (sampling without replacement).
+  const chooseCategories = () => {
+    const taken = new Set(slots.filter(s => s.lock).map(s => s.lock));
+    return slots.map(s => {
+      if (s.lock) return byName(s.lock);
+      const pool = DB.filter(c => !taken.has(c.name));
+      const c = pool[randBelow(pool.length)];
+      taken.add(c.name);
+      return c;
+    });
   };
 
-  const renderChips = () => {
-    $("chips").innerHTML = DB.map(c =>
-      `<button class="chip" aria-pressed="${chosen.includes(c.name)}" data-c="${esc(c.name)}">${esc(c.name)}</button>`).join("");
+  const squareHTML = (s, i) => {
+    if (!s.path) return `<button class="glass press sq" data-i="${i}" aria-label="Empty square ${i + 1}"><div class="cap">${s.lock ? `<span>${esc(s.lock)}</span>${ICON_LOCK}` : ""}</div><div class="big"></div><div class="foot"></div></button>`;
+    const p = s.path, last = p[p.length - 1], trail = p.slice(0, -1).map(n => n.name).join(" · ");
+    const capTxt = `${esc(p[0].name)}<span class="f">${p.length > 2 ? " · " + p.slice(1, -1).map(n => esc(n.name)).join(" · ") : ""}</span>`;
+    return `<button class="glass press sq" data-i="${i}" aria-label="${esc(trail + ": " + last.name)}"><div class="cap"><span>${capTxt}</span>${s.lock ? ICON_LOCK : ""}</div><div class="big">${esc(last.name)}</div><div class="foot">${last.children ? ICON_DEEPER : ""}</div></button>`;
   };
 
-  const renderCards = (spinName) => {
-    const names = chosen.filter(n => results[n]);
-    if (!names.length) {
-      $("cards").innerHTML = `<div class="empty">Nothing picked yet. Tap Pick, or choose nothing and get a surprise category.</div>`;
-      return;
-    }
-    $("cards").innerHTML = names.map((n, i) => {
-      const p = results[n], last = p[p.length - 1];
-      return `<article class="card t${i % 3}" data-c="${esc(n)}">
-        <div class="path">${p.slice(0, -1).map(x => `<span>${esc(x.name)}</span>`).join("")}</div>
-        <div class="big${spinName === n ? " spin" : ""}">${esc(last.name)}</div>
-        <div class="row">
-          <button class="btn" data-a="deeper" ${last.children ? "" : "disabled"}>${last.children ? "Go deeper" : "As deep as it goes"}</button>
-          <button class="btn" data-a="again">Again</button>
-          <span class="depth">Layer ${p.length - 1}</span>
-        </div></article>`;
-    }).join("");
+  const render = () => {
+    const el = $("slots");
+    el.dataset.n = slots.length; el.style.setProperty("--n", slots.length);
+    el.innerHTML = slots.map((s, i) => `<div class="cell">${squareHTML(s, i)}</div>`).join("");
+    document.querySelectorAll("#count button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.n === slots.length));
   };
 
-  // Decorative flicker before the real result lands. The result is decided first.
-  const reveal = (names) => {
-    renderCards();
-    if (reduce) return;
-    const els = names.map(n => document.querySelector(`.card[data-c="${CSS.escape(n)}"] .big`)).filter(Boolean);
-    const pools = names.map(n => { const p = results[n]; const parent = p[p.length - 2]; return parent ? parent.children : DB; });
-    const finals = els.map(e => e.textContent);
-    let t = 0;
-    const tick = () => {
-      t++;
-      els.forEach((e, i) => { e.textContent = pools[i][randBelow(pools[i].length)].name; e.classList.add("spin"); });
-      if (t < 9) setTimeout(tick, 40 + t * 9);
-      else els.forEach((e, i) => { e.textContent = finals[i]; e.classList.remove("spin"); });
-    };
-    tick();
+  const shiftWash = () => document.querySelectorAll("#wash i").forEach(i => {
+    i.style.transform = `translate(${randBelow(41) - 20}%, ${randBelow(41) - 20}%) scale(${0.85 + randBelow(40) / 100})`;
+  });
+
+  // Slot-reel reveal: results are decided first, the flicker is only decoration.
+  const spin = (indices) => {
+    shiftWash();
+    render();
+    if (calm) return;
+    indices.forEach((i, order) => {
+      const big = document.querySelector(`.sq[data-i="${i}"] .big`);
+      const cap = null;
+      if (!big) return;
+      const final = big.textContent, finalCap = cap ? cap.textContent : "";
+      const ticks = 10 + order * 4;
+      let t = 0;
+      const step = () => {
+        if (t++ < ticks) {
+          const r = ALL[randBelow(ALL.length)];
+          big.textContent = r[1]; if (cap) cap.textContent = r[0];
+          big.classList.remove("tick"); void big.offsetWidth; big.classList.add("tick");
+          setTimeout(step, 40 + t * t * 0.55);
+        } else { big.textContent = final; if (cap) cap.textContent = finalCap; big.classList.remove("tick"); void big.offsetWidth; big.classList.add("tick"); }
+      };
+      step();
+    });
   };
 
   const pickAll = () => {
-    $("hint").textContent = "";
-    if (!chosen.length) {
-      const c = DB[randBelow(DB.length)];
-      chosen = [c.name];
-      renderChips();
-      $("hint").textContent = `Surprise category: ${c.name}`;
-    }
-    chosen.forEach(n => {
-      const depth = results[n] ? Math.max(1, results[n].length - 1) : 1;
-      results[n] = descend([cat(n)], depth);
-    });
-    reveal(chosen);
+    const cats = chooseCategories();
+    slots.forEach((s, i) => s.path = descend([cats[i]], 2));
+    spin(slots.map((_, i) => i));
   };
 
-  $("chips").addEventListener("click", e => {
-    const b = e.target.closest(".chip"); if (!b) return;
-    const n = b.dataset.c;
-    if (chosen.includes(n)) { chosen = chosen.filter(x => x !== n); delete results[n]; $("hint").textContent = ""; }
-    else if (chosen.length >= MAX) { $("hint").textContent = "Three at most. Tap one off first."; return; }
-    else { chosen.push(n); results[n] = descend([cat(n)], 1); reveal([n]); }
-    renderChips(); renderCards();
-  });
+  const pickOne = i => {
+    const others = new Set(slots.filter((s, j) => j !== i && s.path).map(s => s.path[0].name));
+    const pool = slots[i].lock ? [byName(slots[i].lock)] : DB.filter(c => !others.has(c.name));
+    slots[i].path = descend([pool[randBelow(pool.length)]], 2);
+    spin([i]);
+  };
 
-  $("cards").addEventListener("click", e => {
-    const b = e.target.closest(".btn"); if (!b || b.disabled) return;
-    const n = b.closest(".card").dataset.c;
-    const p = results[n];
-    results[n] = b.dataset.a === "deeper" ? descend(p, 1) : descend(p.slice(0, -1), 1);
-    reveal([n]);
-  });
+  const deeper = i => {
+    const s = slots[i], last = s.path[s.path.length - 1];
+    if (!last.children) { const el = document.querySelector(`.sq[data-i="${i}"]`); el.classList.remove("nope"); void el.offsetWidth; el.classList.add("nope"); return; }
+    s.path = descend(s.path, 1);
+    spin([i]);
+  };
 
-  $("go").addEventListener("click", pickAll);
+  const setCount = n => {
+    while (slots.length < n) slots.push({ path: null, lock: null });
+    slots.length = n;
+    try { localStorage.setItem("tyl-n", n); } catch (e) {}
+    render();
+  };
 
+  // Category sheet (long-press a square)
+  const openSheet = i => {
+    const host = $("sheetHost"), cur = slots[i].lock;
+    const names = DB.map(c => c.name).sort((a, b) => a.localeCompare(b));
+    const rows = q => [`<button data-c="">Any category${!cur ? " ✓" : ""}</button>`]
+      .concat(names.filter(n => n.toLowerCase().includes(q)).map(n => `<button data-c="${esc(n)}" aria-current="${n === cur}"><span>${esc(n)}</span>${n === cur ? "<span>✓</span>" : ""}</button>`)).join("");
+    host.innerHTML = `<div class="scrim" id="scrim"></div><div class="glass sheet" role="dialog" aria-label="Choose a category">
+      <div class="grab"></div><div class="shead"><b>Square ${i + 1}</b><button class="done" id="done">Done</button></div>
+      <input class="search" id="q" type="search" placeholder="Search ${names.length} categories" autocomplete="off"><div class="list" id="list">${rows("")}</div></div>`;
+    const close = () => host.innerHTML = "";
+    $("scrim").onclick = close; $("done").onclick = close;
+    $("q").oninput = e => $("list").innerHTML = rows(e.target.value.trim().toLowerCase());
+    $("list").onclick = e => { const b = e.target.closest("button"); if (!b) return; slots[i].lock = b.dataset.c || null; close(); pickOne(i); };
+  };
+
+  // Square gestures: tap = pick or go deeper, long-press = choose category
+  let pressTimer = null, longFired = false;
+  const sq = e => e.target.closest(".sq");
+  $("slots").addEventListener("pointerdown", e => { const el = sq(e); if (!el) return; longFired = false; pressTimer = setTimeout(() => { longFired = true; openSheet(+el.dataset.i); }, 520); });
+  ["pointerup", "pointerleave", "pointercancel"].forEach(t => $("slots").addEventListener(t, () => clearTimeout(pressTimer)));
+  $("slots").addEventListener("contextmenu", e => { const el = sq(e); if (!el) return; e.preventDefault(); clearTimeout(pressTimer); if (!longFired) openSheet(+el.dataset.i); longFired = true; });
+  $("slots").addEventListener("click", e => { const el = sq(e); if (!el || longFired) return; const i = +el.dataset.i; slots[i].path ? deeper(i) : pickOne(i); });
+  $("pick").addEventListener("click", pickAll);
+  $("count").addEventListener("click", e => { const b = e.target.closest("button"); if (b) setCount(+b.dataset.n); });
+
+  // Fit the iPhone 15 frame to the window on larger screens
+  const fit = () => document.documentElement.style.setProperty("--s", Math.min(1, (innerHeight - 32) / 876, (innerWidth - 24) / 417).toFixed(3));
+  addEventListener("resize", fit); fit();
+
+  render();
   fetch("categories.json").then(r => r.json()).then(d => {
     DB = d;
-    chosen = ["Music", "Drawing"];
-    chosen.forEach(n => results[n] = descend([cat(n)], 2));
-    renderChips(); renderCards();
-  }).catch(() => { $("cards").innerHTML = `<div class="empty">Couldn't load the category list. Check categories.json sits next to this page.</div>`; });
+    const walk = (n, cat) => n.children ? n.children.forEach(k => walk(k, cat)) : ALL.push([cat, n.name]);
+    DB.forEach(c => walk(c, c.name));
+    $("pick").disabled = false;
+  }).catch(() => { $("slots").insertAdjacentHTML("afterend", `<p style="color:var(--muted);text-align:center">Couldn't load categories.json</p>`); });
 }
 </script>
