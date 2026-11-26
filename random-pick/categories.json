@@ -1,0 +1,982 @@
+[
+ {
+  "name": "Music",
+  "children": [
+   {
+    "name": "Instrument",
+    "children": [
+     {
+      "name": "Strings",
+      "children": [
+       {
+        "name": "Guitar"
+       },
+       {
+        "name": "Ukulele"
+       },
+       {
+        "name": "Violin"
+       },
+       {
+        "name": "Cello"
+       },
+       {
+        "name": "Bass guitar"
+       },
+       {
+        "name": "Harp"
+       }
+      ]
+     },
+     {
+      "name": "Keys",
+      "children": [
+       {
+        "name": "Piano"
+       },
+       {
+        "name": "Synthesiser"
+       },
+       {
+        "name": "Organ"
+       },
+       {
+        "name": "Accordion"
+       }
+      ]
+     },
+     {
+      "name": "Wind",
+      "children": [
+       {
+        "name": "Flute"
+       },
+       {
+        "name": "Saxophone"
+       },
+       {
+        "name": "Trumpet"
+       },
+       {
+        "name": "Clarinet"
+       },
+       {
+        "name": "Harmonica"
+       }
+      ]
+     },
+     {
+      "name": "Percussion",
+      "children": [
+       {
+        "name": "Drum kit"
+       },
+       {
+        "name": "Cajón"
+       },
+       {
+        "name": "Hand drums"
+       },
+       {
+        "name": "Marimba"
+       },
+       {
+        "name": "Body percussion"
+       }
+      ]
+     },
+     {
+      "name": "Voice",
+      "children": [
+       {
+        "name": "Lead vocal"
+       },
+       {
+        "name": "Harmony singing"
+       },
+       {
+        "name": "Beatboxing"
+       },
+       {
+        "name": "Whistling"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Genre",
+    "children": [
+     {
+      "name": "Pop",
+      "children": [
+       {
+        "name": "Synth-pop"
+       },
+       {
+        "name": "City pop"
+       },
+       {
+        "name": "K-pop"
+       },
+       {
+        "name": "Cantopop"
+       }
+      ]
+     },
+     {
+      "name": "Rock",
+      "children": [
+       {
+        "name": "Indie rock"
+       },
+       {
+        "name": "Punk"
+       },
+       {
+        "name": "Shoegaze"
+       },
+       {
+        "name": "Classic rock"
+       }
+      ]
+     },
+     {
+      "name": "Electronic",
+      "children": [
+       {
+        "name": "House"
+       },
+       {
+        "name": "Drum and bass"
+       },
+       {
+        "name": "Lo-fi beats"
+       },
+       {
+        "name": "Ambient"
+       }
+      ]
+     },
+     {
+      "name": "Jazz",
+      "children": [
+       {
+        "name": "Bossa nova"
+       },
+       {
+        "name": "Swing"
+       },
+       {
+        "name": "Jazz fusion"
+       },
+       {
+        "name": "Bebop"
+       }
+      ]
+     },
+     {
+      "name": "Folk and roots",
+      "children": [
+       {
+        "name": "Singer-songwriter"
+       },
+       {
+        "name": "Bluegrass"
+       },
+       {
+        "name": "Celtic folk"
+       },
+       {
+        "name": "Country"
+       }
+      ]
+     },
+     {
+      "name": "Hip-hop and R&B",
+      "children": [
+       {
+        "name": "Boom bap"
+       },
+       {
+        "name": "Neo-soul"
+       },
+       {
+        "name": "Trap"
+       },
+       {
+        "name": "Classic R&B"
+       }
+      ]
+     },
+     {
+      "name": "Classical",
+      "children": [
+       {
+        "name": "Baroque"
+       },
+       {
+        "name": "Romantic era"
+       },
+       {
+        "name": "Minimalism"
+       },
+       {
+        "name": "Film score"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Activity",
+    "children": [
+     {
+      "name": "Write a song",
+      "children": [
+       {
+        "name": "About a smell"
+       },
+       {
+        "name": "Using only three chords"
+       },
+       {
+        "name": "As a lullaby"
+       },
+       {
+        "name": "From an object's point of view"
+       }
+      ]
+     },
+     {
+      "name": "Cover a song",
+      "children": [
+       {
+        "name": "In a different genre"
+       },
+       {
+        "name": "At half speed"
+       },
+       {
+        "name": "As a duet"
+       },
+       {
+        "name": "Unplugged"
+       }
+      ]
+     },
+     {
+      "name": "Make a beat",
+      "children": [
+       {
+        "name": "Using kitchen sounds"
+       },
+       {
+        "name": "Under 60 seconds"
+       },
+       {
+        "name": "At 90 BPM"
+       },
+       {
+        "name": "With one drum sound"
+       }
+      ]
+     },
+     {
+      "name": "Listen deeply",
+      "children": [
+       {
+        "name": "An album start to finish"
+       },
+       {
+        "name": "A genre you've never heard"
+       },
+       {
+        "name": "A song from the year you were born"
+       },
+       {
+        "name": "A friend's favourite track"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Mood",
+    "children": [
+     {
+      "name": "Rainy afternoon"
+     },
+     {
+      "name": "Road trip"
+     },
+     {
+      "name": "Late night"
+     },
+     {
+      "name": "Sunday morning"
+     },
+     {
+      "name": "Party"
+     },
+     {
+      "name": "Heartbreak"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Drawing",
+  "children": [
+   {
+    "name": "Medium",
+    "children": [
+     {
+      "name": "Dry",
+      "children": [
+       {
+        "name": "Graphite pencil"
+       },
+       {
+        "name": "Charcoal"
+       },
+       {
+        "name": "Coloured pencil"
+       },
+       {
+        "name": "Oil pastel"
+       },
+       {
+        "name": "Ballpoint pen"
+       }
+      ]
+     },
+     {
+      "name": "Wet",
+      "children": [
+       {
+        "name": "Watercolour"
+       },
+       {
+        "name": "Gouache"
+       },
+       {
+        "name": "Ink and brush"
+       },
+       {
+        "name": "Acrylic"
+       },
+       {
+        "name": "Markers"
+       }
+      ]
+     },
+     {
+      "name": "Digital",
+      "children": [
+       {
+        "name": "Pixel art"
+       },
+       {
+        "name": "Vector shapes"
+       },
+       {
+        "name": "Digital painting"
+       },
+       {
+        "name": "One-layer only"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Subject",
+    "children": [
+     {
+      "name": "People",
+      "children": [
+       {
+        "name": "Self-portrait"
+       },
+       {
+        "name": "A friend from memory"
+       },
+       {
+        "name": "Hands"
+       },
+       {
+        "name": "Someone across the room"
+       }
+      ]
+     },
+     {
+      "name": "Places",
+      "children": [
+       {
+        "name": "The view from a window"
+       },
+       {
+        "name": "An imaginary city"
+       },
+       {
+        "name": "Your bedroom"
+       },
+       {
+        "name": "A street corner"
+       }
+      ]
+     },
+     {
+      "name": "Things",
+      "children": [
+       {
+        "name": "The contents of a bag"
+       },
+       {
+        "name": "Your shoes"
+       },
+       {
+        "name": "A houseplant"
+       },
+       {
+        "name": "Breakfast"
+       }
+      ]
+     },
+     {
+      "name": "Creatures",
+      "children": [
+       {
+        "name": "A pet"
+       },
+       {
+        "name": "A bird"
+       },
+       {
+        "name": "A made-up animal"
+       },
+       {
+        "name": "A sea creature"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Style",
+    "children": [
+     {
+      "name": "Line only"
+     },
+     {
+      "name": "Silhouette"
+     },
+     {
+      "name": "Cartoon"
+     },
+     {
+      "name": "Botanical study"
+     },
+     {
+      "name": "Comic panel"
+     },
+     {
+      "name": "Isometric"
+     }
+    ]
+   },
+   {
+    "name": "Constraint",
+    "children": [
+     {
+      "name": "Non-dominant hand"
+     },
+     {
+      "name": "Under 5 minutes"
+     },
+     {
+      "name": "One continuous line"
+     },
+     {
+      "name": "Eyes closed"
+     },
+     {
+      "name": "Only three colours"
+     },
+     {
+      "name": "Upside down"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Cooking",
+  "children": [
+   {
+    "name": "Cuisine",
+    "children": [
+     {
+      "name": "Asian",
+      "children": [
+       {
+        "name": "Cantonese"
+       },
+       {
+        "name": "Japanese"
+       },
+       {
+        "name": "Thai"
+       },
+       {
+        "name": "Korean"
+       },
+       {
+        "name": "Vietnamese"
+       },
+       {
+        "name": "Indian"
+       }
+      ]
+     },
+     {
+      "name": "European",
+      "children": [
+       {
+        "name": "Italian"
+       },
+       {
+        "name": "French"
+       },
+       {
+        "name": "Spanish"
+       },
+       {
+        "name": "Greek"
+       }
+      ]
+     },
+     {
+      "name": "Americas",
+      "children": [
+       {
+        "name": "Mexican"
+       },
+       {
+        "name": "Peruvian"
+       },
+       {
+        "name": "Southern US"
+       },
+       {
+        "name": "Brazilian"
+       }
+      ]
+     },
+     {
+      "name": "Middle East and Africa",
+      "children": [
+       {
+        "name": "Lebanese"
+       },
+       {
+        "name": "Moroccan"
+       },
+       {
+        "name": "Ethiopian"
+       },
+       {
+        "name": "Turkish"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Dish type",
+    "children": [
+     {
+      "name": "Noodles"
+     },
+     {
+      "name": "Dumplings"
+     },
+     {
+      "name": "Soup"
+     },
+     {
+      "name": "Salad"
+     },
+     {
+      "name": "Flatbread"
+     },
+     {
+      "name": "Dessert"
+     },
+     {
+      "name": "Breakfast"
+     }
+    ]
+   },
+   {
+    "name": "Technique",
+    "children": [
+     {
+      "name": "Steaming"
+     },
+     {
+      "name": "Roasting"
+     },
+     {
+      "name": "Fermenting"
+     },
+     {
+      "name": "Stir-frying"
+     },
+     {
+      "name": "Braising"
+     },
+     {
+      "name": "No cooking at all"
+     }
+    ]
+   },
+   {
+    "name": "Challenge",
+    "children": [
+     {
+      "name": "Five ingredients max"
+     },
+     {
+      "name": "Under 20 minutes"
+     },
+     {
+      "name": "Use what's in the fridge"
+     },
+     {
+      "name": "One pan only"
+     },
+     {
+      "name": "Make it for someone else"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Writing",
+  "children": [
+   {
+    "name": "Form",
+    "children": [
+     {
+      "name": "Poem",
+      "children": [
+       {
+        "name": "Haiku"
+       },
+       {
+        "name": "Sonnet"
+       },
+       {
+        "name": "Free verse"
+       },
+       {
+        "name": "Limerick"
+       }
+      ]
+     },
+     {
+      "name": "Story",
+      "children": [
+       {
+        "name": "Six-word story"
+       },
+       {
+        "name": "Flash fiction"
+       },
+       {
+        "name": "Fairy tale retold"
+       },
+       {
+        "name": "Letter-format story"
+       }
+      ]
+     },
+     {
+      "name": "Non-fiction",
+      "children": [
+       {
+        "name": "Diary entry"
+       },
+       {
+        "name": "Review of something tiny"
+       },
+       {
+        "name": "Letter to your past self"
+       },
+       {
+        "name": "How-to guide"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Prompt",
+    "children": [
+     {
+      "name": "A door that wasn't there yesterday"
+     },
+     {
+      "name": "The last message on a phone"
+     },
+     {
+      "name": "A smell from childhood"
+     },
+     {
+      "name": "Two strangers stuck in a lift"
+     },
+     {
+      "name": "A city where it never stops raining"
+     }
+    ]
+   },
+   {
+    "name": "Constraint",
+    "children": [
+     {
+      "name": "No letter E"
+     },
+     {
+      "name": "Exactly 100 words"
+     },
+     {
+      "name": "Second person only"
+     },
+     {
+      "name": "All dialogue"
+     },
+     {
+      "name": "Start with the ending"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Movement",
+  "children": [
+   {
+    "name": "Activity",
+    "children": [
+     {
+      "name": "Dance",
+      "children": [
+       {
+        "name": "Hip-hop"
+       },
+       {
+        "name": "Salsa"
+       },
+       {
+        "name": "Freestyle"
+       },
+       {
+        "name": "Contemporary"
+       }
+      ]
+     },
+     {
+      "name": "Stretch",
+      "children": [
+       {
+        "name": "Yoga flow"
+       },
+       {
+        "name": "Desk stretches"
+       },
+       {
+        "name": "Mobility routine"
+       }
+      ]
+     },
+     {
+      "name": "Outdoors",
+      "children": [
+       {
+        "name": "Walk a new route"
+       },
+       {
+        "name": "Hike"
+       },
+       {
+        "name": "Cycle"
+       },
+       {
+        "name": "Swim"
+       }
+      ]
+     },
+     {
+      "name": "Play",
+      "children": [
+       {
+        "name": "Frisbee"
+       },
+       {
+        "name": "Badminton"
+       },
+       {
+        "name": "Skipping rope"
+       },
+       {
+        "name": "Hula hoop"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Duration",
+    "children": [
+     {
+      "name": "5 minutes"
+     },
+     {
+      "name": "15 minutes"
+     },
+     {
+      "name": "30 minutes"
+     },
+     {
+      "name": "An hour"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Photography",
+  "children": [
+   {
+    "name": "Subject",
+    "children": [
+     {
+      "name": "Shadows"
+     },
+     {
+      "name": "Reflections"
+     },
+     {
+      "name": "Strangers' hands"
+     },
+     {
+      "name": "Signs and lettering"
+     },
+     {
+      "name": "Something red"
+     },
+     {
+      "name": "Textures"
+     }
+    ]
+   },
+   {
+    "name": "Rule",
+    "children": [
+     {
+      "name": "Only from knee height"
+     },
+     {
+      "name": "Black and white"
+     },
+     {
+      "name": "Ten shots only"
+     },
+     {
+      "name": "Same spot, different times"
+     },
+     {
+      "name": "Macro, as close as you can"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Making",
+  "children": [
+   {
+    "name": "Paper",
+    "children": [
+     {
+      "name": "Origami"
+     },
+     {
+      "name": "Collage"
+     },
+     {
+      "name": "Zine"
+     },
+     {
+      "name": "Paper cutting"
+     }
+    ]
+   },
+   {
+    "name": "Fibre",
+    "children": [
+     {
+      "name": "Knitting"
+     },
+     {
+      "name": "Embroidery"
+     },
+     {
+      "name": "Crochet"
+     },
+     {
+      "name": "Weaving"
+     }
+    ]
+   },
+   {
+    "name": "Build",
+    "children": [
+     {
+      "name": "Clay sculpture"
+     },
+     {
+      "name": "Cardboard model"
+     },
+     {
+      "name": "Lego build"
+     },
+     {
+      "name": "Upcycle something old"
+     }
+    ]
+   },
+   {
+    "name": "Print",
+    "children": [
+     {
+      "name": "Potato stamp"
+     },
+     {
+      "name": "Linocut"
+     },
+     {
+      "name": "Cyanotype"
+     },
+     {
+      "name": "Stencil"
+     }
+    ]
+   }
+  ]
+ }
+]

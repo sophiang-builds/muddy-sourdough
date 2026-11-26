@@ -1,0 +1,174 @@
+<meta charset="utf-8">
+<title>Pick for Me</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pick for Me">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday, a party toy for friends
+   IDEA a stack of drawn cards: each category deals one, you can push it one layer deeper
+   PICTURE the dealt cards themselves, large, with the path showing how deep you went
+   COLOUR white ground, jomud blue leads, peach and lilac tint the cards
+   TYPE Inter Light display + Nunito Sans text (jomud house pair)
+   LAYOUT one column, chips on top, cards in the middle, a big pick button pinned to the bottom */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1220);--ink:light-dark(#1D1F24,#eef1f7);--muted:light-dark(#6b707a,#9aa1ae);--line:light-dark(#E9E4DE,#262d3d);--brand:light-dark(#0F66DB,#5c9bff);--onbrand:#fff;--peach:light-dark(#FDEDE2,#3a2418);--peachink:light-dark(#b4501c,#ffb184);--lilac:light-dark(#F1EDFD,#271d40);--lilacink:light-dark(#6a32cc,#c5a8ff);--blue:light-dark(#EEF4FE,#14244a);--blueink:light-dark(#0F66DB,#8db8ff)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito Sans","Inter",system-ui,sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+.app{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;padding-top:max(20px,env(safe-area-inset-top,0px));padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px));padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+.mark{font:600 17px/1 "Inter",sans-serif;color:var(--brand);letter-spacing:-.02em}
+h1{font:300 clamp(34px,9vw,46px)/1.05 "Inter",sans-serif;letter-spacing:-.02em;margin:10px 0 4px}
+.sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:15px;min-height:44px;padding:0 16px;border-radius:22px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand);color:var(--onbrand)}
+.chip:focus-visible,.btn:focus-visible,.go:focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 45%,transparent);outline-offset:2px}
+.hint{min-height:22px;margin:8px 0 6px;font-size:14px;color:var(--muted)}
+.cards{display:grid;gap:12px}
+.card{border-radius:22px;padding:18px 18px 14px;background:var(--blue);color:var(--blueink)}
+.card.t1{background:var(--peach);color:var(--peachink)}
+.card.t2{background:var(--lilac);color:var(--lilacink)}
+.path{font-size:14px;display:flex;flex-wrap:wrap;gap:4px 6px;opacity:.9}
+.path span+span::before{content:"\203A";margin-right:6px;opacity:.6}
+.big{font:300 clamp(28px,8vw,38px)/1.08 "Inter",sans-serif;letter-spacing:-.02em;color:var(--ink);margin:8px 0 14px;overflow-wrap:anywhere}
+.big.spin{opacity:.45}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{font:inherit;font-size:15px;font-weight:700;min-height:44px;padding:0 16px;border-radius:22px;border:0;cursor:pointer;background:color-mix(in srgb,currentColor 14%,transparent);color:inherit}
+.btn:disabled{opacity:.4;cursor:default}
+.depth{margin-left:auto;font-size:13px;opacity:.8;white-space:nowrap}
+.empty{border:1.5px dashed var(--line);border-radius:22px;padding:28px 18px;color:var(--muted);text-align:center}
+.dock{position:fixed;left:0;right:0;bottom:0;padding:14px max(5vw,16px) calc(14px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,var(--bg) 30%)}
+.go{display:block;width:100%;max-width:560px;margin:0 auto;font:600 19px/1 "Inter",sans-serif;min-height:60px;border-radius:30px;border:0;background:var(--brand);color:var(--onbrand);cursor:pointer;transition:transform .1s}
+.go:active{transform:scale(.98)}
+.foot{margin-top:18px;font-size:13px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.go,.chip{transition:none}}
+</style>
+
+<div class="app">
+  <div class="mark">jomud</div>
+  <h1>Pick for me</h1>
+  <p class="sub">Choose up to three categories, then let chance decide.</p>
+  <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+  <div class="hint" id="hint" aria-live="polite"></div>
+  <div class="cards" id="cards" aria-live="polite"></div>
+  <p class="foot">Every pick comes from a fixed list using your phone's secure random generator, so nothing is chosen by AI and no option is favoured.</p>
+</div>
+<div class="dock"><button class="go" id="go">Pick</button></div>
+
+<script>
+{
+  const MAX = 3;
+  // Unbiased integer in [0, n): rejection sampling over crypto.getRandomValues.
+  const buf = new Uint32Array(1);
+  const randBelow = n => {
+    const limit = Math.floor(0x100000000 / n) * n;
+    let x;
+    do { crypto.getRandomValues(buf); x = buf[0]; } while (x >= limit);
+    return x % n;
+  };
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let DB = [];
+  let chosen = [];          // category names, in tap order
+  let results = {};         // name -> array of nodes from category down
+
+  const $ = id => document.getElementById(id);
+  const cat = name => DB.find(c => c.name === name);
+
+  const descend = (nodes, steps) => {
+    const out = nodes.slice();
+    for (let i = 0; i < steps; i++) {
+      const kids = out[out.length - 1].children;
+      if (!kids) break;
+      out.push(kids[randBelow(kids.length)]);
+    }
+    return out;
+  };
+
+  const renderChips = () => {
+    $("chips").innerHTML = DB.map(c =>
+      `<button class="chip" aria-pressed="${chosen.includes(c.name)}" data-c="${esc(c.name)}">${esc(c.name)}</button>`).join("");
+  };
+
+  const renderCards = (spinName) => {
+    const names = chosen.filter(n => results[n]);
+    if (!names.length) {
+      $("cards").innerHTML = `<div class="empty">Nothing picked yet. Tap Pick, or choose nothing and get a surprise category.</div>`;
+      return;
+    }
+    $("cards").innerHTML = names.map((n, i) => {
+      const p = results[n], last = p[p.length - 1];
+      return `<article class="card t${i % 3}" data-c="${esc(n)}">
+        <div class="path">${p.slice(0, -1).map(x => `<span>${esc(x.name)}</span>`).join("")}</div>
+        <div class="big${spinName === n ? " spin" : ""}">${esc(last.name)}</div>
+        <div class="row">
+          <button class="btn" data-a="deeper" ${last.children ? "" : "disabled"}>${last.children ? "Go deeper" : "As deep as it goes"}</button>
+          <button class="btn" data-a="again">Again</button>
+          <span class="depth">Layer ${p.length - 1}</span>
+        </div></article>`;
+    }).join("");
+  };
+
+  // Decorative flicker before the real result lands. The result is decided first.
+  const reveal = (names) => {
+    renderCards();
+    if (reduce) return;
+    const els = names.map(n => document.querySelector(`.card[data-c="${CSS.escape(n)}"] .big`)).filter(Boolean);
+    const pools = names.map(n => { const p = results[n]; const parent = p[p.length - 2]; return parent ? parent.children : DB; });
+    const finals = els.map(e => e.textContent);
+    let t = 0;
+    const tick = () => {
+      t++;
+      els.forEach((e, i) => { e.textContent = pools[i][randBelow(pools[i].length)].name; e.classList.add("spin"); });
+      if (t < 9) setTimeout(tick, 40 + t * 9);
+      else els.forEach((e, i) => { e.textContent = finals[i]; e.classList.remove("spin"); });
+    };
+    tick();
+  };
+
+  const pickAll = () => {
+    $("hint").textContent = "";
+    if (!chosen.length) {
+      const c = DB[randBelow(DB.length)];
+      chosen = [c.name];
+      renderChips();
+      $("hint").textContent = `Surprise category: ${c.name}`;
+    }
+    chosen.forEach(n => {
+      const depth = results[n] ? Math.max(1, results[n].length - 1) : 1;
+      results[n] = descend([cat(n)], depth);
+    });
+    reveal(chosen);
+  };
+
+  $("chips").addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    const n = b.dataset.c;
+    if (chosen.includes(n)) { chosen = chosen.filter(x => x !== n); delete results[n]; $("hint").textContent = ""; }
+    else if (chosen.length >= MAX) { $("hint").textContent = "Three at most. Tap one off first."; return; }
+    else { chosen.push(n); results[n] = descend([cat(n)], 1); reveal([n]); }
+    renderChips(); renderCards();
+  });
+
+  $("cards").addEventListener("click", e => {
+    const b = e.target.closest(".btn"); if (!b || b.disabled) return;
+    const n = b.closest(".card").dataset.c;
+    const p = results[n];
+    results[n] = b.dataset.a === "deeper" ? descend(p, 1) : descend(p.slice(0, -1), 1);
+    reveal([n]);
+  });
+
+  $("go").addEventListener("click", pickAll);
+
+  fetch("categories.json").then(r => r.json()).then(d => {
+    DB = d;
+    chosen = ["Music", "Drawing"];
+    chosen.forEach(n => results[n] = descend([cat(n)], 2));
+    renderChips(); renderCards();
+  }).catch(() => { $("cards").innerHTML = `<div class="empty">Couldn't load the category list. Check categories.json sits next to this page.</div>`; });
+}
+</script>
