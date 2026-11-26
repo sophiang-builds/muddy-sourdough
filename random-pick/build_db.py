@@ -319,13 +319,42 @@ def parse_compact(path):
         kids = []
         for f in facets:
             fname, items = f.split(":", 1)
-            kids.append({"name": fname.strip(), "children": [{"name": i.strip()[0].upper() + i.strip()[1:]} for i in items.split(",") if i.strip()]})
+            # "hide": the facet label (Do, Make, Twist...) is a grouping, not something worth
+            # showing as a pick on its own, so the explore app steps straight through it.
+            kids.append({"name": fname.strip(), "hide": True, "children": [{"name": i.strip()[0].upper() + i.strip()[1:]} for i in items.split(",") if i.strip()]})
         cats.append({"name": name, "children": kids})
     return cats
+
+def attach_exact(data, path):
+    """Category > Item: exact; exact  ->  adds the exact names as children of that item."""
+    missing = []
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        head, items = line.split(":", 1)
+        cat, item = [x.strip() for x in head.split(">")]
+        exact = [{"name": x.strip()} for x in items.split(";") if x.strip()]
+        found = 0
+        def walk(n):
+            nonlocal found
+            for k in n.get("children", []):
+                if k["name"].lower() == item.lower() and "children" not in k:
+                    k["children"] = exact; found += 1
+                walk(k)
+        for c in data:
+            if c["name"] == cat:
+                walk(c)
+        if not found:
+            missing.append(f"{cat} > {item}")
+    if missing:
+        print("Not found (check spelling):", "; ".join(missing))
+    return data
 
 if __name__ == "__main__":
     data = [strip(n) for n in parse(TREE)]
     data += parse_compact(pathlib.Path(__file__).with_name("more_categories.txt"))
+    data = attach_exact(data, pathlib.Path(__file__).with_name("exact_items.txt"))
     names = [c["name"] for c in data]
     dupes = {n for n in names if names.count(n) > 1}
     assert not dupes, f"duplicate categories: {dupes}"

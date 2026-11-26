@@ -9,10 +9,38 @@
       "name": "Strings",
       "children": [
        {
-        "name": "Guitar"
+        "name": "Guitar",
+        "children": [
+         {
+          "name": "Fender Stratocaster"
+         },
+         {
+          "name": "Gibson Les Paul"
+         },
+         {
+          "name": "Yamaha FG800"
+         },
+         {
+          "name": "Taylor GS Mini"
+         },
+         {
+          "name": "Martin D-28"
+         }
+        ]
        },
        {
-        "name": "Ukulele"
+        "name": "Ukulele",
+        "children": [
+         {
+          "name": "Kala KA-15S"
+         },
+         {
+          "name": "Martin S1 Uke"
+         },
+         {
+          "name": "Cordoba 15CM"
+         }
+        ]
        },
        {
         "name": "Violin"
@@ -32,10 +60,41 @@
       "name": "Keys",
       "children": [
        {
-        "name": "Piano"
+        "name": "Piano",
+        "children": [
+         {
+          "name": "Yamaha U1 upright"
+         },
+         {
+          "name": "Steinway Model D"
+         },
+         {
+          "name": "Roland FP-30X"
+         },
+         {
+          "name": "Casio Privia PX-S1100"
+         }
+        ]
        },
        {
-        "name": "Synthesiser"
+        "name": "Synthesiser",
+        "children": [
+         {
+          "name": "Korg Minilogue"
+         },
+         {
+          "name": "Arturia MicroFreak"
+         },
+         {
+          "name": "Roland Juno-60"
+         },
+         {
+          "name": "Teenage Engineering OP-1"
+         },
+         {
+          "name": "Moog Subsequent 37"
+         }
+        ]
        },
        {
         "name": "Organ"
@@ -52,7 +111,15 @@
         "name": "Flute"
        },
        {
-        "name": "Saxophone"
+        "name": "Saxophone",
+        "children": [
+         {
+          "name": "Selmer Mark VI"
+         },
+         {
+          "name": "Yamaha YAS-280"
+         }
+        ]
        },
        {
         "name": "Trumpet"
@@ -61,7 +128,18 @@
         "name": "Clarinet"
        },
        {
-        "name": "Harmonica"
+        "name": "Harmonica",
+        "children": [
+         {
+          "name": "Hohner Special 20"
+         },
+         {
+          "name": "Hohner Marine Band"
+         },
+         {
+          "name": "Suzuki Manji"
+         }
+        ]
        }
       ]
      },
@@ -69,7 +147,18 @@
       "name": "Percussion",
       "children": [
        {
-        "name": "Drum kit"
+        "name": "Drum kit",
+        "children": [
+         {
+          "name": "Pearl Export"
+         },
+         {
+          "name": "Ludwig Classic Maple"
+         },
+         {
+          "name": "Roland TD-17 V-Drums"
+         }
+        ]
        },
        {
         "name": "Cajón"
@@ -111,16 +200,66 @@
       "name": "Pop",
       "children": [
        {
-        "name": "Synth-pop"
+        "name": "Synth-pop",
+        "children": [
+         {
+          "name": "Depeche Mode"
+         },
+         {
+          "name": "Pet Shop Boys"
+         },
+         {
+          "name": "CHVRCHES"
+         }
+        ]
        },
        {
-        "name": "City pop"
+        "name": "City pop",
+        "children": [
+         {
+          "name": "Mariya Takeuchi, Plastic Love"
+         },
+         {
+          "name": "Tatsuro Yamashita, Ride on Time"
+         },
+         {
+          "name": "Anri, Remember Summer Days"
+         }
+        ]
        },
        {
-        "name": "K-pop"
+        "name": "K-pop",
+        "children": [
+         {
+          "name": "BTS"
+         },
+         {
+          "name": "BLACKPINK"
+         },
+         {
+          "name": "NewJeans"
+         },
+         {
+          "name": "SEVENTEEN"
+         }
+        ]
        },
        {
-        "name": "Cantopop"
+        "name": "Cantopop",
+        "children": [
+         {
+          "name": "Leslie Cheung"
+         },
+         {
+          "name": "Anita Mui"
+         },
+         {
+          "name": "Eason Chan"
+         },
+         {
+          "name": "Beyond"
+         }
+        ]
        }
       ]
      },
@@ -134,7 +273,15 @@
         "name": "Punk"
        },
        {
-        "name": "Shoegaze"
+        "name": "Shoegaze",
+        "children": [
+         {
+          "name": "My Bloody Valentine, Loveless"
+         },
+         {
+          "name": "Slowdive, Souvlaki"
+         }
+        ]
        },
        {
         "name": "Classic rock"
@@ -151,10 +298,26 @@
         "name": "Drum and bass"
        },
        {
-        "name": "Lo-fi beats"
+        "name": "Lo-fi beats",
+        "children": [
+         {
+          "name": "Nujabes, Feather"
+         },
+         {
+          "name": "J Dilla, Donuts"
+         }
+        ]
        },
        {
-        "name": "Ambient"
+        "name": "Ambient",
+        "children": [
+         {
+          "name": "Brian Eno, Music for Airports"
+         },
+         {
+          "name": "Hiroshi Yoshimura, Music for Nine Post Cards"
+         }
+        ]
        }
       ]
      },
@@ -162,7 +325,18 @@
       "name": "Jazz",
       "children": [
        {
-        "name": "Bossa nova"
+        "name": "Bossa nova",
+        "children": [
+         {
+          "name": "João Gilberto"
+         },
+         {
+          "name": "Antônio Carlos Jobim"
+         },
+         {
+          "name": "Astrud Gilberto, The Girl from Ipanema"
+         }
+        ]
        },
        {
         "name": "Swing"
@@ -179,7 +353,15 @@
       "name": "Folk and roots",
       "children": [
        {
-        "name": "Singer-songwriter"
+        "name": "Singer-songwriter",
+        "children": [
+         {
+          "name": "Joni Mitchell, Blue"
+         },
+         {
+          "name": "Phoebe Bridgers, Punisher"
+         }
+        ]
        },
        {
         "name": "Bluegrass"
@@ -199,7 +381,15 @@
         "name": "Boom bap"
        },
        {
-        "name": "Neo-soul"
+        "name": "Neo-soul",
+        "children": [
+         {
+          "name": "D'Angelo, Voodoo"
+         },
+         {
+          "name": "Erykah Badu, Baduizm"
+         }
+        ]
        },
        {
         "name": "Trap"
@@ -213,16 +403,43 @@
       "name": "Classical",
       "children": [
        {
-        "name": "Baroque"
+        "name": "Baroque",
+        "children": [
+         {
+          "name": "Bach, Goldberg Variations"
+         },
+         {
+          "name": "Vivaldi, The Four Seasons"
+         }
+        ]
        },
        {
         "name": "Romantic era"
        },
        {
-        "name": "Minimalism"
+        "name": "Minimalism",
+        "children": [
+         {
+          "name": "Steve Reich, Music for 18 Musicians"
+         },
+         {
+          "name": "Philip Glass, Glassworks"
+         }
+        ]
        },
        {
-        "name": "Film score"
+        "name": "Film score",
+        "children": [
+         {
+          "name": "Joe Hisaishi, Spirited Away"
+         },
+         {
+          "name": "Hans Zimmer, Interstellar"
+         },
+         {
+          "name": "Ennio Morricone, The Good, the Bad and the Ugly"
+         }
+        ]
        }
       ]
      }
@@ -336,19 +553,60 @@
       "name": "Dry",
       "children": [
        {
-        "name": "Graphite pencil"
+        "name": "Graphite pencil",
+        "children": [
+         {
+          "name": "Staedtler Mars Lumograph"
+         },
+         {
+          "name": "Faber-Castell 9000"
+         },
+         {
+          "name": "Blackwing 602"
+         }
+        ]
        },
        {
         "name": "Charcoal"
        },
        {
-        "name": "Coloured pencil"
+        "name": "Coloured pencil",
+        "children": [
+         {
+          "name": "Faber-Castell Polychromos"
+         },
+         {
+          "name": "Caran d'Ache Luminance"
+         },
+         {
+          "name": "Prismacolor Premier"
+         }
+        ]
        },
        {
-        "name": "Oil pastel"
+        "name": "Oil pastel",
+        "children": [
+         {
+          "name": "Sennelier oil pastels"
+         },
+         {
+          "name": "Caran d'Ache Neopastel"
+         }
+        ]
        },
        {
-        "name": "Ballpoint pen"
+        "name": "Ballpoint pen",
+        "children": [
+         {
+          "name": "Bic Cristal"
+         },
+         {
+          "name": "Uni Jetstream"
+         },
+         {
+          "name": "Parker Jotter"
+         }
+        ]
        }
       ]
      },
@@ -356,19 +614,68 @@
       "name": "Wet",
       "children": [
        {
-        "name": "Watercolour"
+        "name": "Watercolour",
+        "children": [
+         {
+          "name": "Winsor & Newton Cotman"
+         },
+         {
+          "name": "Daniel Smith Extra Fine"
+         },
+         {
+          "name": "Schmincke Horadam"
+         }
+        ]
        },
        {
-        "name": "Gouache"
+        "name": "Gouache",
+        "children": [
+         {
+          "name": "Holbein Artists' Gouache"
+         },
+         {
+          "name": "Winsor & Newton Designers Gouache"
+         },
+         {
+          "name": "Himi jelly gouache"
+         }
+        ]
        },
        {
-        "name": "Ink and brush"
+        "name": "Ink and brush",
+        "children": [
+         {
+          "name": "Pentel Pocket Brush Pen"
+         },
+         {
+          "name": "Kuretake No. 8 brush pen"
+         }
+        ]
        },
        {
-        "name": "Acrylic"
+        "name": "Acrylic",
+        "children": [
+         {
+          "name": "Liquitex Basics"
+         },
+         {
+          "name": "Golden Heavy Body"
+         }
+        ]
        },
        {
-        "name": "Markers"
+        "name": "Markers",
+        "children": [
+         {
+          "name": "Copic Sketch"
+         },
+         {
+          "name": "Posca"
+         },
+         {
+          "name": "Tombow Dual Brush Pen"
+         }
+        ]
        }
       ]
      },
@@ -376,13 +683,46 @@
       "name": "Digital",
       "children": [
        {
-        "name": "Pixel art"
+        "name": "Pixel art",
+        "children": [
+         {
+          "name": "Aseprite"
+         },
+         {
+          "name": "Piskel"
+         }
+        ]
        },
        {
-        "name": "Vector shapes"
+        "name": "Vector shapes",
+        "children": [
+         {
+          "name": "Adobe Illustrator"
+         },
+         {
+          "name": "Affinity Designer"
+         },
+         {
+          "name": "Figma"
+         }
+        ]
        },
        {
-        "name": "Digital painting"
+        "name": "Digital painting",
+        "children": [
+         {
+          "name": "Procreate"
+         },
+         {
+          "name": "Adobe Fresco"
+         },
+         {
+          "name": "Clip Studio Paint"
+         },
+         {
+          "name": "Krita"
+         }
+        ]
        },
        {
         "name": "One-layer only"
@@ -522,16 +862,75 @@
       "name": "Asian",
       "children": [
        {
-        "name": "Cantonese"
+        "name": "Cantonese",
+        "children": [
+         {
+          "name": "Char siu"
+         },
+         {
+          "name": "Har gow"
+         },
+         {
+          "name": "Wonton noodles"
+         },
+         {
+          "name": "Claypot rice"
+         },
+         {
+          "name": "Steamed fish with ginger and spring onion"
+         }
+        ]
        },
        {
-        "name": "Japanese"
+        "name": "Japanese",
+        "children": [
+         {
+          "name": "Okonomiyaki"
+         },
+         {
+          "name": "Tonkatsu"
+         },
+         {
+          "name": "Oyakodon"
+         },
+         {
+          "name": "Miso soup"
+         }
+        ]
        },
        {
-        "name": "Thai"
+        "name": "Thai",
+        "children": [
+         {
+          "name": "Pad kra pao"
+         },
+         {
+          "name": "Tom yum goong"
+         },
+         {
+          "name": "Som tam"
+         },
+         {
+          "name": "Massaman curry"
+         }
+        ]
        },
        {
-        "name": "Korean"
+        "name": "Korean",
+        "children": [
+         {
+          "name": "Kimchi jjigae"
+         },
+         {
+          "name": "Bibimbap"
+         },
+         {
+          "name": "Tteokbokki"
+         },
+         {
+          "name": "Japchae"
+         }
+        ]
        },
        {
         "name": "Vietnamese"
@@ -545,7 +944,21 @@
       "name": "European",
       "children": [
        {
-        "name": "Italian"
+        "name": "Italian",
+        "children": [
+         {
+          "name": "Cacio e pepe"
+         },
+         {
+          "name": "Risotto alla milanese"
+         },
+         {
+          "name": "Focaccia"
+         },
+         {
+          "name": "Tiramisu"
+         }
+        ]
        },
        {
         "name": "French"
@@ -562,7 +975,21 @@
       "name": "Americas",
       "children": [
        {
-        "name": "Mexican"
+        "name": "Mexican",
+        "children": [
+         {
+          "name": "Tacos al pastor"
+         },
+         {
+          "name": "Chilaquiles"
+         },
+         {
+          "name": "Pozole"
+         },
+         {
+          "name": "Guacamole"
+         }
+        ]
        },
        {
         "name": "Peruvian"
@@ -984,6 +1411,7 @@
   "children": [
    {
     "name": "Bake",
+    "hide": true,
     "children": [
      {
       "name": "Sourdough loaf"
@@ -1013,6 +1441,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Add miso"
@@ -1033,6 +1462,7 @@
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "No recipe"
@@ -1052,6 +1482,7 @@
   "children": [
    {
     "name": "Grow",
+    "hide": true,
     "children": [
      {
       "name": "Basil"
@@ -1081,6 +1512,7 @@
    },
    {
     "name": "Project",
+    "hide": true,
     "children": [
      {
       "name": "Propagate a cutting"
@@ -1106,6 +1538,7 @@
   "children": [
    {
     "name": "Classic",
+    "hide": true,
     "children": [
      {
       "name": "Chess"
@@ -1129,24 +1562,62 @@
    },
    {
     "name": "Modern",
+    "hide": true,
     "children": [
      {
-      "name": "Codenames"
+      "name": "Codenames",
+      "children": [
+       {
+        "name": "Codenames Duet"
+       },
+       {
+        "name": "Codenames Pictures"
+       }
+      ]
      },
      {
-      "name": "Ticket to Ride"
+      "name": "Ticket to Ride",
+      "children": [
+       {
+        "name": "Ticket to Ride Europe"
+       },
+       {
+        "name": "Ticket to Ride: First Journey"
+       }
+      ]
      },
      {
-      "name": "Catan"
+      "name": "Catan",
+      "children": [
+       {
+        "name": "Catan Seafarers"
+       },
+       {
+        "name": "Catan Junior"
+       }
+      ]
      },
      {
       "name": "Splendor"
      },
      {
-      "name": "Azul"
+      "name": "Azul",
+      "children": [
+       {
+        "name": "Azul Summer Pavilion"
+       },
+       {
+        "name": "Azul Stained Glass of Sintra"
+       }
+      ]
      },
      {
-      "name": "Dixit"
+      "name": "Dixit",
+      "children": [
+       {
+        "name": "Dixit Odyssey"
+       }
+      ]
      },
      {
       "name": "Wavelength"
@@ -1155,6 +1626,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Play with house rules"
@@ -1174,35 +1646,128 @@
   "children": [
    {
     "name": "Genre",
+    "hide": true,
     "children": [
      {
-      "name": "Cosy farming sim"
+      "name": "Cosy farming sim",
+      "children": [
+       {
+        "name": "Stardew Valley"
+       },
+       {
+        "name": "Animal Crossing: New Horizons"
+       },
+       {
+        "name": "Story of Seasons"
+       }
+      ]
      },
      {
-      "name": "Roguelike"
+      "name": "Roguelike",
+      "children": [
+       {
+        "name": "Hades"
+       },
+       {
+        "name": "Slay the Spire"
+       },
+       {
+        "name": "Dead Cells"
+       },
+       {
+        "name": "Balatro"
+       }
+      ]
      },
      {
-      "name": "Rhythm game"
+      "name": "Rhythm game",
+      "children": [
+       {
+        "name": "Beat Saber"
+       },
+       {
+        "name": "Taiko no Tatsujin"
+       },
+       {
+        "name": "Rhythm Heaven"
+       }
+      ]
      },
      {
-      "name": "Puzzle platformer"
+      "name": "Puzzle platformer",
+      "children": [
+       {
+        "name": "Celeste"
+       },
+       {
+        "name": "Portal 2"
+       },
+       {
+        "name": "Inside"
+       },
+       {
+        "name": "Limbo"
+       }
+      ]
      },
      {
-      "name": "Co-op cooking chaos"
+      "name": "Co-op cooking chaos",
+      "children": [
+       {
+        "name": "Overcooked! 2"
+       },
+       {
+        "name": "PlateUp!"
+       }
+      ]
      },
      {
-      "name": "Open-world exploring"
+      "name": "Open-world exploring",
+      "children": [
+       {
+        "name": "The Legend of Zelda: Breath of the Wild"
+       },
+       {
+        "name": "Elden Ring"
+       },
+       {
+        "name": "Outer Wilds"
+       }
+      ]
      },
      {
-      "name": "Party game"
+      "name": "Party game",
+      "children": [
+       {
+        "name": "Mario Party Superstars"
+       },
+       {
+        "name": "The Jackbox Party Pack"
+       },
+       {
+        "name": "Fall Guys"
+       }
+      ]
      },
      {
-      "name": "Retro arcade"
+      "name": "Retro arcade",
+      "children": [
+       {
+        "name": "Pac-Man"
+       },
+       {
+        "name": "Street Fighter II"
+       },
+       {
+        "name": "Galaga"
+       }
+      ]
      }
     ]
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Speedrun the first level"
@@ -1225,6 +1790,7 @@
   "children": [
    {
     "name": "Game",
+    "hide": true,
     "children": [
      {
       "name": "Big Two"
@@ -1254,6 +1820,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Invent a new rule each round"
@@ -1273,6 +1840,7 @@
   "children": [
    {
     "name": "Type",
+    "hide": true,
     "children": [
      {
       "name": "Jigsaw"
@@ -1287,7 +1855,18 @@
       "name": "Cryptic clue"
      },
      {
-      "name": "Rubik's cube"
+      "name": "Rubik's cube",
+      "children": [
+       {
+        "name": "Rubik's Cube 3x3"
+       },
+       {
+        "name": "GAN 356 speed cube"
+       },
+       {
+        "name": "MoYu RS3M"
+       }
+      ]
      },
      {
       "name": "Nonogram"
@@ -1302,6 +1881,7 @@
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Race a friend"
@@ -1321,33 +1901,134 @@
   "children": [
    {
     "name": "Genre",
+    "hide": true,
     "children": [
      {
-      "name": "Hong Kong action"
+      "name": "Hong Kong action",
+      "children": [
+       {
+        "name": "Police Story"
+       },
+       {
+        "name": "Hard Boiled"
+       },
+       {
+        "name": "Kung Fu Hustle"
+       },
+       {
+        "name": "Infernal Affairs"
+       }
+      ]
      },
      {
-      "name": "Studio Ghibli"
+      "name": "Studio Ghibli",
+      "children": [
+       {
+        "name": "Spirited Away"
+       },
+       {
+        "name": "My Neighbor Totoro"
+       },
+       {
+        "name": "Kiki's Delivery Service"
+       },
+       {
+        "name": "Princess Mononoke"
+       }
+      ]
      },
      {
-      "name": "Wong Kar-wai mood"
+      "name": "Wong Kar-wai mood",
+      "children": [
+       {
+        "name": "In the Mood for Love"
+       },
+       {
+        "name": "Chungking Express"
+       },
+       {
+        "name": "Fallen Angels"
+       },
+       {
+        "name": "Happy Together"
+       }
+      ]
      },
      {
-      "name": "Heist"
+      "name": "Heist",
+      "children": [
+       {
+        "name": "Ocean's Eleven"
+       },
+       {
+        "name": "Heat"
+       },
+       {
+        "name": "Baby Driver"
+       }
+      ]
      },
      {
-      "name": "Whodunnit"
+      "name": "Whodunnit",
+      "children": [
+       {
+        "name": "Knives Out"
+       },
+       {
+        "name": "Murder on the Orient Express"
+       },
+       {
+        "name": "Clue"
+       }
+      ]
      },
      {
       "name": "Documentary"
      },
      {
-      "name": "Silent film"
+      "name": "Silent film",
+      "children": [
+       {
+        "name": "Metropolis"
+       },
+       {
+        "name": "The General"
+       },
+       {
+        "name": "Modern Times"
+       }
+      ]
      },
      {
-      "name": "80s sci-fi"
+      "name": "80s sci-fi",
+      "children": [
+       {
+        "name": "Blade Runner"
+       },
+       {
+        "name": "Back to the Future"
+       },
+       {
+        "name": "The Terminator"
+       },
+       {
+        "name": "E.T. the Extra-Terrestrial"
+       }
+      ]
      },
      {
-      "name": "Musical"
+      "name": "Musical",
+      "children": [
+       {
+        "name": "Singin' in the Rain"
+       },
+       {
+        "name": "La La Land"
+       },
+       {
+        "name": "The Sound of Music"
+       }
+      ]
      },
      {
       "name": "Animated short"
@@ -1356,6 +2037,7 @@
    },
    {
     "name": "Pick",
+    "hide": true,
     "children": [
      {
       "name": "A film from the year you were born"
@@ -1373,6 +2055,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Watch with the sound off for ten minutes"
@@ -1392,35 +2075,111 @@
   "children": [
    {
     "name": "Kind",
+    "hide": true,
     "children": [
      {
-      "name": "Korean drama"
+      "name": "Korean drama",
+      "children": [
+       {
+        "name": "Crash Landing on You"
+       },
+       {
+        "name": "Reply 1988"
+       },
+       {
+        "name": "Extraordinary Attorney Woo"
+       }
+      ]
      },
      {
-      "name": "Sitcom"
+      "name": "Sitcom",
+      "children": [
+       {
+        "name": "Friends"
+       },
+       {
+        "name": "Brooklyn Nine-Nine"
+       },
+       {
+        "name": "The Office"
+       }
+      ]
      },
      {
-      "name": "Nature series"
+      "name": "Nature series",
+      "children": [
+       {
+        "name": "Planet Earth II"
+       },
+       {
+        "name": "Blue Planet II"
+       },
+       {
+        "name": "Our Planet"
+       }
+      ]
      },
      {
-      "name": "Cooking competition"
+      "name": "Cooking competition",
+      "children": [
+       {
+        "name": "The Great British Bake Off"
+       },
+       {
+        "name": "MasterChef"
+       },
+       {
+        "name": "Culinary Class Wars"
+       }
+      ]
      },
      {
       "name": "True crime"
      },
      {
-      "name": "Anthology"
+      "name": "Anthology",
+      "children": [
+       {
+        "name": "Black Mirror"
+       },
+       {
+        "name": "Love, Death & Robots"
+       }
+      ]
      },
      {
-      "name": "TVB classic"
+      "name": "TVB classic",
+      "children": [
+       {
+        "name": "Journey to the West (1996)"
+       },
+       {
+        "name": "War and Beauty"
+       },
+       {
+        "name": "Triumph in the Skies"
+       }
+      ]
      },
      {
-      "name": "Travel show"
+      "name": "Travel show",
+      "children": [
+       {
+        "name": "Street Food"
+       },
+       {
+        "name": "Somebody Feed Phil"
+       },
+       {
+        "name": "Anthony Bourdain: No Reservations"
+       }
+      ]
      }
     ]
    },
    {
     "name": "Ritual",
+    "hide": true,
     "children": [
      {
       "name": "Pilot episodes only"
@@ -1440,24 +2199,77 @@
   "children": [
    {
     "name": "Genre",
+    "hide": true,
     "children": [
      {
-      "name": "Slice of life"
+      "name": "Slice of life",
+      "children": [
+       {
+        "name": "K-On!"
+       },
+       {
+        "name": "Barakamon"
+       },
+       {
+        "name": "Laid-Back Camp"
+       }
+      ]
      },
      {
-      "name": "Sports anime"
+      "name": "Sports anime",
+      "children": [
+       {
+        "name": "Haikyu!!"
+       },
+       {
+        "name": "Slam Dunk"
+       },
+       {
+        "name": "Kuroko's Basketball"
+       }
+      ]
      },
      {
-      "name": "Mecha"
+      "name": "Mecha",
+      "children": [
+       {
+        "name": "Neon Genesis Evangelion"
+       },
+       {
+        "name": "Mobile Suit Gundam"
+       },
+       {
+        "name": "Code Geass"
+       }
+      ]
      },
      {
       "name": "Isekai"
      },
      {
-      "name": "Shōjo romance"
+      "name": "Shōjo romance",
+      "children": [
+       {
+        "name": "Fruits Basket"
+       },
+       {
+        "name": "Ouran High School Host Club"
+       },
+       {
+        "name": "Kimi ni Todoke"
+       }
+      ]
      },
      {
-      "name": "Cooking anime"
+      "name": "Cooking anime",
+      "children": [
+       {
+        "name": "Food Wars!"
+       },
+       {
+        "name": "Restaurant to Another World"
+       }
+      ]
      },
      {
       "name": "Horror"
@@ -1466,6 +2278,7 @@
    },
    {
     "name": "Activity",
+    "hide": true,
     "children": [
      {
       "name": "Watch a first episode"
@@ -1488,21 +2301,60 @@
   "children": [
    {
     "name": "Genre",
+    "hide": true,
     "children": [
      {
-      "name": "Mystery"
+      "name": "Mystery",
+      "children": [
+       {
+        "name": "The Murder of Roger Ackroyd"
+       },
+       {
+        "name": "The Girl with the Dragon Tattoo"
+       }
+      ]
      },
      {
-      "name": "Sci-fi"
+      "name": "Sci-fi",
+      "children": [
+       {
+        "name": "Dune"
+       },
+       {
+        "name": "The Three-Body Problem"
+       },
+       {
+        "name": "Project Hail Mary"
+       }
+      ]
      },
      {
       "name": "Poetry collection"
      },
      {
-      "name": "Memoir"
+      "name": "Memoir",
+      "children": [
+       {
+        "name": "Educated"
+       },
+       {
+        "name": "Born a Crime"
+       }
+      ]
      },
      {
-      "name": "Graphic novel"
+      "name": "Graphic novel",
+      "children": [
+       {
+        "name": "Persepolis"
+       },
+       {
+        "name": "Maus"
+       },
+       {
+        "name": "Watchmen"
+       }
+      ]
      },
      {
       "name": "Fantasy"
@@ -1517,6 +2369,7 @@
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Read the first chapter of five books"
@@ -1534,6 +2387,7 @@
    },
    {
     "name": "Pick",
+    "hide": true,
     "children": [
      {
       "name": "An author from another continent"
@@ -1553,21 +2407,50 @@
   "children": [
    {
     "name": "Topic",
+    "hide": true,
     "children": [
      {
-      "name": "History"
+      "name": "History",
+      "children": [
+       {
+        "name": "The Rest Is History"
+       },
+       {
+        "name": "Dan Carlin's Hardcore History"
+       }
+      ]
      },
      {
-      "name": "True crime"
+      "name": "True crime",
+      "children": [
+       {
+        "name": "Serial"
+       }
+      ]
      },
      {
-      "name": "Comedy"
+      "name": "Comedy",
+      "children": [
+       {
+        "name": "Conan O'Brien Needs a Friend"
+       }
+      ]
      },
      {
-      "name": "Design"
+      "name": "Design",
+      "children": [
+       {
+        "name": "99% Invisible"
+       }
+      ]
      },
      {
-      "name": "Science"
+      "name": "Science",
+      "children": [
+       {
+        "name": "Radiolab"
+       }
+      ]
      },
      {
       "name": "Interviews"
@@ -1582,6 +2465,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Listen at 1.5x on a walk"
@@ -1601,6 +2485,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Write five jokes"
@@ -1621,6 +2506,7 @@
    },
    {
     "name": "Watch",
+    "hide": true,
     "children": [
      {
       "name": "Stand-up special"
@@ -1643,6 +2529,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Act out a scene"
@@ -1663,6 +2550,7 @@
    },
    {
     "name": "Watch",
+    "hide": true,
     "children": [
      {
       "name": "Musical"
@@ -1688,6 +2576,7 @@
   "children": [
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "Ten words in Japanese"
@@ -1714,6 +2603,7 @@
    },
    {
     "name": "Activity",
+    "hide": true,
     "children": [
      {
       "name": "Label things at home"
@@ -1736,6 +2626,7 @@
   "children": [
    {
     "name": "Era",
+    "hide": true,
     "children": [
      {
       "name": "Ancient Egypt"
@@ -1762,6 +2653,7 @@
    },
    {
     "name": "Activity",
+    "hide": true,
     "children": [
      {
       "name": "Find one weird fact"
@@ -1784,6 +2676,7 @@
   "children": [
    {
     "name": "Kitchen",
+    "hide": true,
     "children": [
      {
       "name": "Grow crystals"
@@ -1807,6 +2700,7 @@
    },
    {
     "name": "Try",
+    "hide": true,
     "children": [
      {
       "name": "Build a paper bridge"
@@ -1829,6 +2723,7 @@
   "children": [
    {
     "name": "Spot",
+    "hide": true,
     "children": [
      {
       "name": "The Moon's craters"
@@ -1852,6 +2747,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Draw the moon phases for a week"
@@ -1871,6 +2767,7 @@
   "children": [
    {
     "name": "Spot",
+    "hide": true,
     "children": [
      {
       "name": "A bird you can't name"
@@ -1894,6 +2791,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Sketch it"
@@ -1916,6 +2814,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Rock pooling"
@@ -1939,6 +2838,7 @@
    },
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "A deep-sea creature"
@@ -1958,6 +2858,7 @@
   "children": [
    {
     "name": "Area",
+    "hide": true,
     "children": [
      {
       "name": "Sham Shui Po"
@@ -1990,6 +2891,7 @@
    },
    {
     "name": "Mission",
+    "hide": true,
     "children": [
      {
       "name": "Find the best egg waffle"
@@ -2018,6 +2920,7 @@
   "children": [
    {
     "name": "Hong Kong trail",
+    "hide": true,
     "children": [
      {
       "name": "Dragon's Back"
@@ -2050,6 +2953,7 @@
    },
    {
     "name": "Style",
+    "hide": true,
     "children": [
      {
       "name": "Sunrise hike"
@@ -2072,6 +2976,7 @@
   "children": [
    {
     "name": "Hong Kong",
+    "hide": true,
     "children": [
      {
       "name": "Egg waffles"
@@ -2098,6 +3003,7 @@
    },
    {
     "name": "World",
+    "hide": true,
     "children": [
      {
       "name": "Tacos"
@@ -2124,6 +3030,7 @@
    },
    {
     "name": "Mission",
+    "hide": true,
     "children": [
      {
       "name": "Rate three stalls"
@@ -2143,21 +3050,51 @@
   "children": [
    {
     "name": "Brew",
+    "hide": true,
     "children": [
      {
-      "name": "Pour-over"
+      "name": "Pour-over",
+      "children": [
+       {
+        "name": "Hario V60"
+       },
+       {
+        "name": "Kalita Wave"
+       },
+       {
+        "name": "Chemex"
+       }
+      ]
      },
      {
-      "name": "AeroPress"
+      "name": "AeroPress",
+      "children": [
+       {
+        "name": "AeroPress Original"
+       },
+       {
+        "name": "AeroPress Go"
+       }
+      ]
      },
      {
       "name": "Cold brew"
      },
      {
-      "name": "Moka pot"
+      "name": "Moka pot",
+      "children": [
+       {
+        "name": "Bialetti Moka Express"
+       }
+      ]
      },
      {
-      "name": "French press"
+      "name": "French press",
+      "children": [
+       {
+        "name": "Bodum Chambord"
+       }
+      ]
      },
      {
       "name": "Dalgona"
@@ -2169,6 +3106,7 @@
    },
    {
     "name": "Mission",
+    "hide": true,
     "children": [
      {
       "name": "Try a new café"
@@ -2191,18 +3129,43 @@
   "children": [
    {
     "name": "Kind",
+    "hide": true,
     "children": [
      {
-      "name": "Oolong"
+      "name": "Oolong",
+      "children": [
+       {
+        "name": "Tieguanyin"
+       },
+       {
+        "name": "Da Hong Pao"
+       },
+       {
+        "name": "Dong Ding"
+       }
+      ]
      },
      {
-      "name": "Pu-erh"
+      "name": "Pu-erh",
+      "children": [
+       {
+        "name": "Menghai 7572 ripe cake"
+       }
+      ]
      },
      {
       "name": "Jasmine"
      },
      {
-      "name": "Matcha"
+      "name": "Matcha",
+      "children": [
+       {
+        "name": "Ippodo"
+       },
+       {
+        "name": "Marukyu Koyamaen"
+       }
+      ]
      },
      {
       "name": "Milk tea"
@@ -2220,6 +3183,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Gongfu tea session"
@@ -2242,6 +3206,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "Mocktail with herbs"
@@ -2265,6 +3230,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Colour theme"
@@ -2284,6 +3250,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "Mango pomelo sago"
@@ -2313,6 +3280,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Only three ingredients"
@@ -2332,6 +3300,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Style one item three ways"
@@ -2355,6 +3324,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "90s"
@@ -2383,6 +3353,7 @@
   "children": [
    {
     "name": "Find",
+    "hide": true,
     "children": [
      {
       "name": "A jacket under $100"
@@ -2403,6 +3374,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "Ten-minute dash"
@@ -2422,6 +3394,7 @@
   "children": [
    {
     "name": "Try",
+    "hide": true,
     "children": [
      {
       "name": "A graphic liner"
@@ -2445,6 +3418,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "Festival look"
@@ -2464,6 +3438,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Rearrange one room"
@@ -2487,6 +3462,7 @@
    },
    {
     "name": "Budget",
+    "hide": true,
     "children": [
      {
       "name": "Zero dollars"
@@ -2506,6 +3482,7 @@
   "children": [
    {
     "name": "Spot",
+    "hide": true,
     "children": [
      {
       "name": "A staircase"
@@ -2529,6 +3506,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Sketch a facade"
@@ -2551,6 +3529,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A poster for an imaginary film"
@@ -2574,6 +3553,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "One font only"
@@ -2596,6 +3576,7 @@
   "children": [
    {
     "name": "Style",
+    "hide": true,
     "children": [
      {
       "name": "Brush calligraphy"
@@ -2619,6 +3600,7 @@
    },
    {
     "name": "Write",
+    "hide": true,
     "children": [
      {
       "name": "Your name"
@@ -2641,6 +3623,7 @@
   "children": [
    {
     "name": "Medium",
+    "hide": true,
     "children": [
      {
       "name": "Acrylic pour"
@@ -2664,6 +3647,7 @@
    },
    {
     "name": "Subject",
+    "hide": true,
     "children": [
      {
       "name": "Sunset"
@@ -2689,6 +3673,7 @@
   "children": [
    {
     "name": "Material",
+    "hide": true,
     "children": [
      {
       "name": "Air-dry clay"
@@ -2712,6 +3697,7 @@
    },
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A tiny creature"
@@ -2734,6 +3720,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A pinch pot"
@@ -2757,6 +3744,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Eyes closed"
@@ -2776,6 +3764,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A tote bag"
@@ -2799,6 +3788,7 @@
    },
    {
     "name": "Technique",
+    "hide": true,
     "children": [
      {
       "name": "Sashiko"
@@ -2821,6 +3811,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A spoon"
@@ -2844,6 +3835,7 @@
    },
    {
     "name": "Tool",
+    "hide": true,
     "children": [
      {
       "name": "Knife only"
@@ -2863,15 +3855,52 @@
   "children": [
    {
     "name": "Build",
+    "hide": true,
     "children": [
      {
-      "name": "A tiny game"
+      "name": "A tiny game",
+      "children": [
+       {
+        "name": "Godot"
+       },
+       {
+        "name": "PICO-8"
+       },
+       {
+        "name": "Phaser"
+       },
+       {
+        "name": "Unity"
+       }
+      ]
      },
      {
-      "name": "A personal website"
+      "name": "A personal website",
+      "children": [
+       {
+        "name": "Astro"
+       },
+       {
+        "name": "Next.js"
+       },
+       {
+        "name": "Framer"
+       },
+       {
+        "name": "GitHub Pages"
+       }
+      ]
      },
      {
-      "name": "A bot that tells jokes"
+      "name": "A bot that tells jokes",
+      "children": [
+       {
+        "name": "Discord bot"
+       },
+       {
+        "name": "Telegram bot"
+       }
+      ]
      },
      {
       "name": "A to-do app"
@@ -2886,6 +3915,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "In one hour"
@@ -2905,15 +3935,38 @@
   "children": [
    {
     "name": "Build",
+    "hide": true,
     "children": [
      {
-      "name": "An LED circuit"
+      "name": "An LED circuit",
+      "children": [
+       {
+        "name": "Arduino Uno"
+       },
+       {
+        "name": "Raspberry Pi Pico"
+       },
+       {
+        "name": "BBC micro:bit"
+       }
+      ]
      },
      {
       "name": "A buzzer alarm"
      },
      {
-      "name": "A plant moisture sensor"
+      "name": "A plant moisture sensor",
+      "children": [
+       {
+        "name": "Arduino Uno"
+       },
+       {
+        "name": "ESP32"
+       },
+       {
+        "name": "Raspberry Pi Pico W"
+       }
+      ]
      },
      {
       "name": "A mini fan"
@@ -2925,6 +3978,7 @@
    },
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "Soldering"
@@ -2944,9 +3998,21 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
-      "name": "A one-minute vlog"
+      "name": "A one-minute vlog",
+      "children": [
+       {
+        "name": "CapCut"
+       },
+       {
+        "name": "DaVinci Resolve"
+       },
+       {
+        "name": "iMovie"
+       }
+      ]
      },
      {
       "name": "A stop-motion clip"
@@ -2967,6 +4033,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "One take only"
@@ -2989,15 +4056,31 @@
   "children": [
    {
     "name": "Style",
+    "hide": true,
     "children": [
      {
-      "name": "Flipbook"
+      "name": "Flipbook",
+      "children": [
+       {
+        "name": "FlipaClip"
+       }
+      ]
      },
      {
-      "name": "Stop motion"
+      "name": "Stop motion",
+      "children": [
+       {
+        "name": "Stop Motion Studio"
+       }
+      ]
      },
      {
-      "name": "Pixel animation"
+      "name": "Pixel animation",
+      "children": [
+       {
+        "name": "Aseprite"
+       }
+      ]
      },
      {
       "name": "Rotoscope"
@@ -3012,6 +4095,7 @@
    },
    {
     "name": "Subject",
+    "hide": true,
     "children": [
      {
       "name": "A bouncing ball"
@@ -3034,12 +4118,27 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A beat from kitchen sounds"
      },
      {
-      "name": "A lo-fi loop"
+      "name": "A lo-fi loop",
+      "children": [
+       {
+        "name": "Ableton Live"
+       },
+       {
+        "name": "FL Studio"
+       },
+       {
+        "name": "GarageBand"
+       },
+       {
+        "name": "Koala Sampler"
+       }
+      ]
      },
      {
       "name": "A remix of a voice memo"
@@ -3054,6 +4153,7 @@
    },
    {
     "name": "Constraint",
+    "hide": true,
     "children": [
      {
       "name": "8 bars only"
@@ -3076,6 +4176,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "A 15-minute set"
@@ -3093,6 +4194,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "Sunset vibes"
@@ -3115,6 +4217,7 @@
   "children": [
    {
     "name": "Sing",
+    "hide": true,
     "children": [
      {
       "name": "A Cantopop classic"
@@ -3138,6 +4241,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "In a different voice"
@@ -3157,6 +4261,7 @@
   "children": [
    {
     "name": "Style",
+    "hide": true,
     "children": [
      {
       "name": "K-pop choreography"
@@ -3186,6 +4291,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Learn a TikTok dance"
@@ -3208,6 +4314,7 @@
   "children": [
    {
     "name": "Try",
+    "hide": true,
     "children": [
      {
       "name": "Tai chi"
@@ -3231,6 +4338,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Watch a kung fu film"
@@ -3250,6 +4358,7 @@
   "children": [
    {
     "name": "Play",
+    "hide": true,
     "children": [
      {
       "name": "Basketball"
@@ -3273,6 +4382,7 @@
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Shoot 10 free throws"
@@ -3292,15 +4402,46 @@
   "children": [
    {
     "name": "Play",
+    "hide": true,
     "children": [
      {
-      "name": "Badminton"
+      "name": "Badminton",
+      "children": [
+       {
+        "name": "Yonex Astrox 88S"
+       },
+       {
+        "name": "Yonex Arcsaber 11"
+       },
+       {
+        "name": "Victor Thruster K"
+       }
+      ]
      },
      {
-      "name": "Table tennis"
+      "name": "Table tennis",
+      "children": [
+       {
+        "name": "Butterfly Viscaria blade"
+       },
+       {
+        "name": "DHS Hurricane 3 rubber"
+       }
+      ]
      },
      {
-      "name": "Tennis"
+      "name": "Tennis",
+      "children": [
+       {
+        "name": "Wilson Pro Staff"
+       },
+       {
+        "name": "Babolat Pure Drive"
+       },
+       {
+        "name": "Head Speed"
+       }
+      ]
      },
      {
       "name": "Pickleball"
@@ -3315,6 +4456,7 @@
    },
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Longest rally"
@@ -3334,6 +4476,7 @@
   "children": [
    {
     "name": "Try",
+    "hide": true,
     "children": [
      {
       "name": "Kayaking"
@@ -3357,6 +4500,7 @@
    },
    {
     "name": "Place",
+    "hide": true,
     "children": [
      {
       "name": "Sai Kung"
@@ -3382,6 +4526,7 @@
   "children": [
    {
     "name": "Type",
+    "hide": true,
     "children": [
      {
       "name": "HIIT"
@@ -3408,6 +4553,7 @@
    },
    {
     "name": "Duration",
+    "hide": true,
     "children": [
      {
       "name": "7 minutes"
@@ -3422,6 +4568,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "With a friend"
@@ -3441,6 +4588,7 @@
   "children": [
    {
     "name": "Pose",
+    "hide": true,
     "children": [
      {
       "name": "Downward dog"
@@ -3470,6 +4618,7 @@
    },
    {
     "name": "Session",
+    "hide": true,
     "children": [
      {
       "name": "Morning flow"
@@ -3492,6 +4641,7 @@
   "children": [
    {
     "name": "Type",
+    "hide": true,
     "children": [
      {
       "name": "5 km"
@@ -3515,6 +4665,7 @@
    },
    {
     "name": "Route",
+    "hide": true,
     "children": [
      {
       "name": "Waterfront"
@@ -3532,6 +4683,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Run without music"
@@ -3548,6 +4700,7 @@
   "children": [
    {
     "name": "Route",
+    "hide": true,
     "children": [
      {
       "name": "Tolo Harbour"
@@ -3568,6 +4721,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Ride somewhere for breakfast"
@@ -3587,6 +4741,7 @@
   "children": [
    {
     "name": "Type",
+    "hide": true,
     "children": [
      {
       "name": "Body scan"
@@ -3610,6 +4765,7 @@
    },
    {
     "name": "Duration",
+    "hide": true,
     "children": [
      {
       "name": "3 minutes"
@@ -3629,6 +4785,7 @@
   "children": [
    {
     "name": "Prompt",
+    "hide": true,
     "children": [
      {
       "name": "What surprised me today"
@@ -3652,6 +4809,7 @@
    },
    {
     "name": "Format",
+    "hide": true,
     "children": [
      {
       "name": "Bullet journal"
@@ -3674,6 +4832,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "A digital detox hour"
@@ -3697,6 +4856,7 @@
    },
    {
     "name": "Plan",
+    "hide": true,
     "children": [
      {
       "name": "A lazy Sunday"
@@ -3716,6 +4876,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Write a thank-you note"
@@ -3739,6 +4900,7 @@
    },
    {
     "name": "Size",
+    "hide": true,
     "children": [
      {
       "name": "Tiny"
@@ -3758,6 +4920,7 @@
   "children": [
    {
     "name": "Cause",
+    "hide": true,
     "children": [
      {
       "name": "Animal shelter"
@@ -3781,6 +4944,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "One afternoon"
@@ -3800,6 +4964,7 @@
   "children": [
    {
     "name": "Ask",
+    "hide": true,
     "children": [
      {
       "name": "What's a hill you'd die on"
@@ -3823,6 +4988,7 @@
    },
    {
     "name": "Format",
+    "hide": true,
     "children": [
      {
       "name": "One question each"
@@ -3842,6 +5008,7 @@
   "children": [
    {
     "name": "Game",
+    "hide": true,
     "children": [
      {
       "name": "Charades"
@@ -3853,13 +5020,23 @@
       "name": "Mafia"
      },
      {
-      "name": "Werewolf"
+      "name": "Werewolf",
+      "children": [
+       {
+        "name": "One Night Ultimate Werewolf"
+       }
+      ]
      },
      {
       "name": "Pictionary"
      },
      {
-      "name": "Heads Up"
+      "name": "Heads Up",
+      "children": [
+       {
+        "name": "Heads Up! app"
+       }
+      ]
      },
      {
       "name": "The hat game"
@@ -3871,6 +5048,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Themed rounds"
@@ -3890,6 +5068,7 @@
   "children": [
    {
     "name": "Plan",
+    "hide": true,
     "children": [
      {
       "name": "Cook a new cuisine"
@@ -3919,6 +5098,7 @@
    },
    {
     "name": "Budget",
+    "hide": true,
     "children": [
      {
       "name": "Free"
@@ -3938,6 +5118,7 @@
   "children": [
    {
     "name": "Plan",
+    "hide": true,
     "children": [
      {
       "name": "Hot pot night"
@@ -3967,6 +5148,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Everyone brings one dish"
@@ -3986,6 +5168,7 @@
   "children": [
    {
     "name": "Spot",
+    "hide": true,
     "children": [
      {
       "name": "Victoria Park"
@@ -4009,6 +5192,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "All one colour"
@@ -4031,6 +5215,7 @@
   "children": [
    {
     "name": "Spot",
+    "hide": true,
     "children": [
      {
       "name": "Ham Tin"
@@ -4051,6 +5236,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Cook over a camp stove"
@@ -4073,6 +5259,7 @@
   "children": [
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "A coin vanish"
@@ -4093,6 +5280,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Perform for a friend"
@@ -4112,6 +5300,7 @@
   "children": [
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "Juggling three balls"
@@ -4135,6 +5324,7 @@
    },
    {
     "name": "Goal",
+    "hide": true,
     "children": [
      {
       "name": "10 catches"
@@ -4154,6 +5344,7 @@
   "children": [
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "Memorise a poem"
@@ -4174,6 +5365,7 @@
    },
    {
     "name": "Technique",
+    "hide": true,
     "children": [
      {
       "name": "Memory palace"
@@ -4193,6 +5385,7 @@
   "children": [
    {
     "name": "Try",
+    "hide": true,
     "children": [
      {
       "name": "A magic square"
@@ -4216,6 +5409,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Explain it to a friend"
@@ -4235,6 +5429,7 @@
   "children": [
    {
     "name": "Question",
+    "hide": true,
     "children": [
      {
       "name": "Is a hot dog a sandwich"
@@ -4258,6 +5453,7 @@
    },
    {
     "name": "Format",
+    "hide": true,
     "children": [
      {
       "name": "Debate it"
@@ -4277,6 +5473,7 @@
   "children": [
    {
     "name": "Topic",
+    "hide": true,
     "children": [
      {
       "name": "Pineapple on pizza"
@@ -4300,6 +5497,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "Argue the side you disagree with"
@@ -4319,6 +5517,7 @@
   "children": [
    {
     "name": "Myth",
+    "hide": true,
     "children": [
      {
       "name": "Chang'e and the Moon"
@@ -4345,6 +5544,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Retell it in modern times"
@@ -4364,6 +5564,7 @@
   "children": [
    {
     "name": "Tale",
+    "hide": true,
     "children": [
      {
       "name": "Cinderella"
@@ -4387,6 +5588,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Villain's point of view"
@@ -4406,6 +5608,7 @@
   "children": [
    {
     "name": "Power",
+    "hide": true,
     "children": [
      {
       "name": "Teleporting"
@@ -4429,6 +5632,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Draw your hero"
@@ -4448,6 +5652,7 @@
   "children": [
    {
     "name": "Invent",
+    "hide": true,
     "children": [
      {
       "name": "A gadget for lazy mornings"
@@ -4471,6 +5676,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Sketch it"
@@ -4490,6 +5696,7 @@
   "children": [
    {
     "name": "Idea",
+    "hide": true,
     "children": [
      {
       "name": "A café concept"
@@ -4510,6 +5717,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Name it"
@@ -4532,6 +5740,7 @@
   "children": [
    {
     "name": "Challenge",
+    "hide": true,
     "children": [
      {
       "name": "No-spend weekend"
@@ -4552,6 +5761,7 @@
    },
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "Compound interest"
@@ -4571,6 +5781,7 @@
   "children": [
    {
     "name": "Learn",
+    "hide": true,
     "children": [
      {
       "name": "Touch typing"
@@ -4597,6 +5808,7 @@
    },
    {
     "name": "Time",
+    "hide": true,
     "children": [
      {
       "name": "In 30 minutes"
@@ -4613,6 +5825,7 @@
   "children": [
    {
     "name": "Topic",
+    "hide": true,
     "children": [
      {
       "name": "Black holes"
@@ -4636,6 +5849,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Watch a launch"
@@ -4655,6 +5869,7 @@
   "children": [
    {
     "name": "Dino",
+    "hide": true,
     "children": [
      {
       "name": "Triceratops"
@@ -4678,6 +5893,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Draw it"
@@ -4697,6 +5913,7 @@
   "children": [
    {
     "name": "Animal",
+    "hide": true,
     "children": [
      {
       "name": "Axolotl"
@@ -4726,6 +5943,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Learn three facts"
@@ -4748,6 +5966,7 @@
   "children": [
    {
     "name": "Plant",
+    "hide": true,
     "children": [
      {
       "name": "Bonsai"
@@ -4771,6 +5990,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Press flowers"
@@ -4793,6 +6013,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Photograph clouds"
@@ -4813,6 +6034,7 @@
    },
    {
     "name": "Mood",
+    "hide": true,
     "children": [
      {
       "name": "Rainy day film"
@@ -4832,6 +6054,7 @@
   "children": [
    {
     "name": "Country",
+    "hide": true,
     "children": [
      {
       "name": "Peru"
@@ -4867,6 +6090,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Cook a dish from it"
@@ -4889,6 +6113,7 @@
   "children": [
    {
     "name": "Festival",
+    "hide": true,
     "children": [
      {
       "name": "Mid-Autumn"
@@ -4915,6 +6140,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Make a lantern"
@@ -4937,6 +6163,7 @@
   "children": [
    {
     "name": "Movement",
+    "hide": true,
     "children": [
      {
       "name": "Impressionism"
@@ -4966,6 +6193,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Make something in that style"
@@ -4985,6 +6213,7 @@
   "children": [
    {
     "name": "Place",
+    "hide": true,
     "children": [
      {
       "name": "M+"
@@ -5008,6 +6237,7 @@
    },
    {
     "name": "Mission",
+    "hide": true,
     "children": [
      {
       "name": "Find your favourite piece"
@@ -5027,6 +6257,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Talk to a stranger"
@@ -5050,6 +6281,7 @@
    },
    {
     "name": "Level",
+    "hide": true,
     "children": [
      {
       "name": "Mild"
@@ -5069,6 +6301,7 @@
   "children": [
    {
     "name": "Colour",
+    "hide": true,
     "children": [
      {
       "name": "Cobalt blue"
@@ -5098,6 +6331,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Wear only it"
@@ -5120,6 +6354,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Blind smell test"
@@ -5140,6 +6375,7 @@
    },
    {
     "name": "Note",
+    "hide": true,
     "children": [
      {
       "name": "Citrus"
@@ -5168,6 +6404,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Record a sound walk"
@@ -5188,6 +6425,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "City noise"
@@ -5210,6 +6448,7 @@
   "children": [
    {
     "name": "Area",
+    "hide": true,
     "children": [
      {
       "name": "One drawer"
@@ -5233,6 +6472,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "15 minutes"
@@ -5252,6 +6492,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "Congee"
@@ -5281,6 +6522,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Make it for dinner"
@@ -5300,6 +6542,7 @@
   "children": [
    {
     "name": "Broth",
+    "hide": true,
     "children": [
      {
       "name": "Tomato"
@@ -5323,6 +6566,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "Everyone brings a mystery ingredient"
@@ -5342,6 +6586,7 @@
   "children": [
    {
     "name": "Flavour",
+    "hide": true,
     "children": [
      {
       "name": "Black sesame"
@@ -5368,6 +6613,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Make no-churn ice cream"
@@ -5387,6 +6633,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Write a picture book for a kid you know"
@@ -5404,6 +6651,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "A lost sock"
@@ -5423,6 +6671,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A four-panel strip"
@@ -5443,6 +6692,7 @@
    },
    {
     "name": "Character",
+    "hide": true,
     "children": [
      {
       "name": "Yourself as a cat"
@@ -5462,6 +6712,7 @@
   "children": [
    {
     "name": "Fandom",
+    "hide": true,
     "children": [
      {
       "name": "Your favourite show"
@@ -5479,6 +6730,7 @@
    },
    {
     "name": "Prompt",
+    "hide": true,
     "children": [
      {
       "name": "A coffee shop AU"
@@ -5501,6 +6753,7 @@
   "children": [
    {
     "name": "Build",
+    "hide": true,
     "children": [
      {
       "name": "A map of an island"
@@ -5524,6 +6777,7 @@
    },
    {
     "name": "Twist",
+    "hide": true,
     "children": [
      {
       "name": "The sky is green"
@@ -5543,6 +6797,7 @@
   "children": [
    {
     "name": "Game",
+    "hide": true,
     "children": [
      {
       "name": "A one-shot Dungeons & Dragons"
@@ -5560,6 +6815,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Make a character"
@@ -5579,6 +6835,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Book one with friends"
@@ -5596,6 +6853,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "Haunted house"
@@ -5615,6 +6873,7 @@
   "children": [
    {
     "name": "Hide",
+    "hide": true,
     "children": [
      {
       "name": "A snack"
@@ -5632,6 +6891,7 @@
    },
    {
     "name": "Clue style",
+    "hide": true,
     "children": [
      {
       "name": "Riddles"
@@ -5654,6 +6914,7 @@
   "children": [
    {
     "name": "Write",
+    "hide": true,
     "children": [
      {
       "name": "A letter to your future self"
@@ -5674,6 +6935,7 @@
    },
    {
     "name": "Form",
+    "hide": true,
     "children": [
      {
       "name": "Handwritten"
@@ -5693,6 +6955,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Rewatch a childhood cartoon"
@@ -5713,6 +6976,7 @@
    },
    {
     "name": "Era",
+    "hide": true,
     "children": [
      {
       "name": "Primary school"
@@ -5732,6 +6996,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Teach a trick"
@@ -5755,6 +7020,7 @@
    },
    {
     "name": "Pet",
+    "hide": true,
     "children": [
      {
       "name": "Dog"
@@ -5783,6 +7049,7 @@
   "children": [
    {
     "name": "Activity",
+    "hide": true,
     "children": [
      {
       "name": "Fort building"
@@ -5806,6 +7073,7 @@
    },
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "Dinosaurs"
@@ -5825,6 +7093,7 @@
   "children": [
    {
     "name": "Theme",
+    "hide": true,
     "children": [
      {
       "name": "Doors"
@@ -5851,6 +7120,7 @@
    },
    {
     "name": "Rule",
+    "hide": true,
     "children": [
      {
       "name": "One lens only"
@@ -5870,6 +7140,7 @@
   "children": [
    {
     "name": "Collect",
+    "hide": true,
     "children": [
      {
       "name": "Postcards"
@@ -5896,6 +7167,7 @@
    },
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Start a collection"
@@ -5915,6 +7187,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Foot soak"
@@ -5938,6 +7211,7 @@
    },
    {
     "name": "Mood",
+    "hide": true,
     "children": [
      {
       "name": "Playlist on"
@@ -5957,6 +7231,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Stargaze"
@@ -5983,6 +7258,7 @@
    },
    {
     "name": "Place",
+    "hide": true,
     "children": [
      {
       "name": "The harbourfront"
@@ -6005,6 +7281,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Board game marathon"
@@ -6028,6 +7305,7 @@
    },
    {
     "name": "Mood",
+    "hide": true,
     "children": [
      {
       "name": "Cosy"
@@ -6047,6 +7325,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "Take the first bus that comes"
@@ -6067,6 +7346,7 @@
    },
    {
     "name": "Time",
+    "hide": true,
     "children": [
      {
       "name": "One hour"
@@ -6086,6 +7366,7 @@
   "children": [
    {
     "name": "Make",
+    "hide": true,
     "children": [
      {
       "name": "A playlist"
@@ -6109,6 +7390,7 @@
    },
    {
     "name": "For",
+    "hide": true,
     "children": [
      {
       "name": "A best friend"
@@ -6131,6 +7413,7 @@
   "children": [
    {
     "name": "Plan",
+    "hide": true,
     "children": [
      {
       "name": "A dream trip"
@@ -6151,6 +7434,7 @@
    },
    {
     "name": "Format",
+    "hide": true,
     "children": [
      {
       "name": "Mood board"
@@ -6170,6 +7454,7 @@
   "children": [
    {
     "name": "Read",
+    "hide": true,
     "children": [
      {
       "name": "A poem"
@@ -6190,6 +7475,7 @@
    },
    {
     "name": "For",
+    "hide": true,
     "children": [
      {
       "name": "A friend"
@@ -6209,6 +7495,7 @@
   "children": [
    {
     "name": "Do",
+    "hide": true,
     "children": [
      {
       "name": "100 push-ups in a day"
@@ -6232,6 +7519,7 @@
    },
    {
     "name": "Length",
+    "hide": true,
     "children": [
      {
       "name": "One day"

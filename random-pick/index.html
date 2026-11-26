@@ -24,7 +24,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 /* stage + iPhone 15 frame (393 x 852 pt screen) */
 .stage{height:100%;display:grid;place-items:center;overflow:hidden}
 .device{zoom:var(--s,1);width:417px;height:876px;padding:12px;border-radius:67px;background:linear-gradient(145deg,#3a3d44,#17181c 40%,#2b2d33);box-shadow:0 0 0 2px #55585f,0 40px 80px -20px rgba(0,0,0,.45),inset 0 0 0 1.5px #0c0c0e}
-.screen{position:relative;width:393px;height:852px;border-radius:55px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column;--top:59px;--bot:34px}
+.screen{position:relative;width:393px;height:852px;border-radius:55px;overflow:clip;background:var(--bg);display:flex;flex-direction:column;--top:59px;--bot:34px}
 .status{position:absolute;top:0;left:0;right:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:4px 34px 0 52px;font:600 17px/1 -apple-system,"SF Pro Text","Inter",sans-serif;z-index:5}
 .status svg{fill:var(--ink)}
 .island{position:absolute;top:11px;left:50%;width:126px;height:37px;margin-left:-63px;border-radius:20px;background:#000;z-index:6}
