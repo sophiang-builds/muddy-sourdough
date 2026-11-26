@@ -49,8 +49,8 @@ struct ContentView: View {
 
                 Picker("Squares", selection: $count) {
                     Image(systemName: "square.fill").tag(1)
-                    Image(systemName: "rectangle.split.1x2.fill").tag(2)
-                    Image(systemName: "rectangle.split.3x3.fill").tag(3)
+                    Image(systemName: "rectangle.grid.1x2.fill").tag(2)
+                    Image(systemName: "line.3.horizontal").tag(3)
                 }
                 .pickerStyle(.segmented)
                 .frame(width: 180)
