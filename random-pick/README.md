@@ -1,4 +1,4 @@
-# Try Your Luck
+# Three Word Brief
 
 Tap Pick for me and up to three glass squares land on something random to do, picked from a fixed list of 123 categories and about 1,400 options.
 
@@ -6,4 +6,4 @@ Tap Pick for me and up to three glass squares land on something random to do, pi
 - `picker.py` picks from the command line with Python's `secrets`. `python3 picker.py --test` checks the picks are even.
 - `index.html` is the web app (Liquid Glass look, iPhone 15 frame on wider screens). It picks with `crypto.getRandomValues` and rejection sampling. Host the folder (for example GitHub Pages), open it in Safari and use Share > Add to Home Screen.
 - `explore.html` is the layered version: Pick for me deals categories, the down arrow goes one layer deeper at random, the up arrow steps back.
-- `ios/TryYourLuck/` is the native SwiftUI app using Apple's real Liquid Glass APIs. See its README.
+- `ios/ThreeWordBrief/` is the native SwiftUI app using Apple's real Liquid Glass APIs. See its README.
