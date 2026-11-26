@@ -66,9 +66,11 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 .cap{font-size:clamp(11px,5.4cqmin,14px);font-weight:600;color:var(--muted);line-height:1.25;display:flex;gap:6px;justify-content:space-between}
 .cap span{flex:1;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .slots[data-n="3"] .cap span{-webkit-line-clamp:1}
-.big{flex:1;display:flex;align-items:safe center;font-weight:600;font-size:clamp(16px,12cqmin,40px);line-height:1.08;letter-spacing:-.02em;hyphens:auto;overflow-wrap:break-word;overflow:hidden}
+.big{flex:1;display:flex;flex-direction:column;justify-content:safe center;align-items:flex-start;gap:6px;font-weight:600;font-size:clamp(16px,12cqmin,40px);line-height:1.08;letter-spacing:-.02em;hyphens:auto;overflow-wrap:break-word;overflow:hidden}
 .slots[data-n="3"] .big{font-size:clamp(18px,14cqmin,28px)}
 .big.tick{animation:roll .09s ease-out}
+.note{font-size:clamp(12px,4.6cqmin,15px);font-weight:500;letter-spacing:0;line-height:1.3;color:var(--muted);hyphens:none;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.slots[data-n="3"] .note{-webkit-line-clamp:2}
 @keyframes roll{from{transform:translateY(-35%);opacity:.2;filter:blur(1.5px)}}
 .foot{position:absolute;right:7cqmin;bottom:6cqmin;height:clamp(12px,7cqmin,18px);color:var(--muted)}
 .slots[data-n="3"] .foot{right:20px;bottom:14px}
@@ -197,7 +199,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
     const trail = p.length === 1 ? "Category" : p.slice(0, -1).map(n => n.name).join(" · ");
     const layer = visible(p).length;
     const dots = Array.from({ length: Math.max(layer, 3) }, (_, k) => `<i class="${k < layer ? "on" : ""}"></i>`).join("");
-    return `<button class="glass press sq" data-i="${i}" aria-label="${esc(trail + ": " + last.name)}"><div class="cap"><span>${esc(trail)}</span>${s.lock ? ICON_LOCK : ""}</div><div class="big">${esc(last.name)}</div><div class="dots" aria-hidden="true">${dots}</div><div class="foot">${last.children ? ICON_DEEPER : ""}</div></button>`;
+    return `<button class="glass press sq" data-i="${i}" aria-label="${esc(trail + ": " + last.name)}"><div class="cap"><span>${esc(trail)}</span>${s.lock ? ICON_LOCK : ""}</div><div class="big"><span>${esc(last.name)}</span>${last.note ? `<small class="note">${esc(last.note)}</small>` : ""}</div><div class="dots" aria-hidden="true">${dots}</div><div class="foot">${last.children ? ICON_DEEPER : ""}</div></button>`;
   };
 
   const render = () => {
@@ -223,14 +225,14 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
     indices.forEach((i, order) => {
       const big = document.querySelector(`.sq[data-i="${i}"] .big`);
       if (!big) return;
-      const final = big.textContent, depth = slots[i].path.length;
+      const final = big.innerHTML, depth = slots[i].path.length;
       const pool = depth === 1 ? DB.map(c => c.name) : canDown(slots[i]) ? MIDS : LEAVES;
       const ticks = 10 + order * 4;
       let t = 0;
       const step = () => {
         big.classList.remove("tick"); void big.offsetWidth; big.classList.add("tick");
         if (t++ < ticks) { big.textContent = pool[randBelow(pool.length)]; setTimeout(step, 40 + t * t * 0.55); }
-        else big.textContent = final;
+        else big.innerHTML = final;
       };
       step();
     });

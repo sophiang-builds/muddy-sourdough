@@ -503,10 +503,54 @@
       "name": "Listen deeply",
       "children": [
        {
-        "name": "An album start to finish"
+        "name": "An album start to finish",
+        "children": [
+         {
+          "name": "Kind of Blue",
+          "note": "Miles Davis"
+         },
+         {
+          "name": "Random Access Memories",
+          "note": "Daft Punk"
+         },
+         {
+          "name": "To Pimp a Butterfly",
+          "note": "Kendrick Lamar"
+         },
+         {
+          "name": "Abbey Road",
+          "note": "The Beatles"
+         },
+         {
+          "name": "Rumours",
+          "note": "Fleetwood Mac"
+         }
+        ]
        },
        {
-        "name": "A genre you've never heard"
+        "name": "A genre you've never heard",
+        "children": [
+         {
+          "name": "Fado",
+          "note": "Portugal: mournful guitar ballads"
+         },
+         {
+          "name": "Enka",
+          "note": "Japan: dramatic, old-school ballads"
+         },
+         {
+          "name": "Highlife",
+          "note": "Ghana: bright guitars and horns"
+         },
+         {
+          "name": "Qawwali",
+          "note": "South Asia: Sufi devotional singing"
+         },
+         {
+          "name": "Gqom",
+          "note": "South Africa: dark, minimal club music"
+         }
+        ]
        },
        {
         "name": "A song from the year you were born"
@@ -522,22 +566,92 @@
     "name": "Mood",
     "children": [
      {
-      "name": "Rainy afternoon"
+      "name": "Rainy afternoon",
+      "children": [
+       {
+        "name": "Rainy Days and Mondays",
+        "note": "The Carpenters"
+       },
+       {
+        "name": "Riders on the Storm",
+        "note": "The Doors"
+       },
+       {
+        "name": "Here Comes the Rain Again",
+        "note": "Eurythmics"
+       }
+      ]
      },
      {
-      "name": "Road trip"
+      "name": "Road trip",
+      "children": [
+       {
+        "name": "Go Your Own Way",
+        "note": "Fleetwood Mac"
+       },
+       {
+        "name": "Mr. Blue Sky",
+        "note": "Electric Light Orchestra"
+       },
+       {
+        "name": "Born to Run",
+        "note": "Bruce Springsteen"
+       }
+      ]
      },
      {
-      "name": "Late night"
+      "name": "Late night",
+      "children": [
+       {
+        "name": "Midnight City",
+        "note": "M83"
+       },
+       {
+        "name": "Nightcall",
+        "note": "Kavinsky"
+       },
+       {
+        "name": "Plastic Love",
+        "note": "Mariya Takeuchi"
+       }
+      ]
      },
      {
       "name": "Sunday morning"
      },
      {
-      "name": "Party"
+      "name": "Party",
+      "children": [
+       {
+        "name": "September",
+        "note": "Earth, Wind & Fire"
+       },
+       {
+        "name": "Dancing Queen",
+        "note": "ABBA"
+       },
+       {
+        "name": "Uptown Funk",
+        "note": "Mark Ronson ft. Bruno Mars"
+       }
+      ]
      },
      {
-      "name": "Heartbreak"
+      "name": "Heartbreak",
+      "children": [
+       {
+        "name": "Someone Like You",
+        "note": "Adele"
+       },
+       {
+        "name": "Nothing Compares 2 U",
+        "note": "Sinéad O'Connor"
+       },
+       {
+        "name": "Back to Black",
+        "note": "Amy Winehouse"
+       }
+      ]
      }
     ]
    }
@@ -1025,19 +1139,106 @@
     "name": "Dish type",
     "children": [
      {
-      "name": "Noodles"
+      "name": "Noodles",
+      "children": [
+       {
+        "name": "Dan dan noodles",
+        "note": "擔擔麵"
+       },
+       {
+        "name": "Dry-fried beef ho fun",
+        "note": "乾炒牛河"
+       },
+       {
+        "name": "Cold soba",
+        "note": "ざるそば"
+       },
+       {
+        "name": "Pad thai"
+       },
+       {
+        "name": "Spaghetti aglio e olio"
+       }
+      ]
      },
      {
-      "name": "Dumplings"
+      "name": "Dumplings",
+      "children": [
+       {
+        "name": "Har gow",
+        "note": "蝦餃"
+       },
+       {
+        "name": "Xiaolongbao",
+        "note": "小籠包"
+       },
+       {
+        "name": "Gyoza",
+        "note": "餃子"
+       },
+       {
+        "name": "Momos"
+       },
+       {
+        "name": "Pierogi"
+       }
+      ]
      },
      {
-      "name": "Soup"
+      "name": "Soup",
+      "children": [
+       {
+        "name": "Watercress and pork soup",
+        "note": "西洋菜湯"
+       },
+       {
+        "name": "Hong Kong borscht",
+        "note": "羅宋湯"
+       },
+       {
+        "name": "Miso soup"
+       },
+       {
+        "name": "Minestrone"
+       }
+      ]
      },
      {
-      "name": "Salad"
+      "name": "Salad",
+      "children": [
+       {
+        "name": "Som tam",
+        "note": "Thai green papaya salad"
+       },
+       {
+        "name": "Greek salad"
+       },
+       {
+        "name": "Caesar salad"
+       },
+       {
+        "name": "Smashed cucumber salad",
+        "note": "拍青瓜"
+       }
+      ]
      },
      {
-      "name": "Flatbread"
+      "name": "Flatbread",
+      "children": [
+       {
+        "name": "Scallion pancake",
+        "note": "蔥油餅"
+       },
+       {
+        "name": "Naan"
+       },
+       {
+        "name": "Pita"
+       },
+       {
+        "name": "Roti canai"
+       }
+      ]
      },
      {
       "name": "Dessert"
@@ -1051,19 +1252,85 @@
     "name": "Technique",
     "children": [
      {
-      "name": "Steaming"
+      "name": "Steaming",
+      "children": [
+       {
+        "name": "Steamed fish with ginger and spring onion",
+        "note": "清蒸魚"
+       },
+       {
+        "name": "Steamed egg custard",
+        "note": "蒸水蛋"
+       },
+       {
+        "name": "Spare ribs with black bean",
+        "note": "豉汁蒸排骨"
+       }
+      ]
      },
      {
-      "name": "Roasting"
+      "name": "Roasting",
+      "children": [
+       {
+        "name": "Lemon and garlic roast chicken"
+       },
+       {
+        "name": "Roasted root vegetables"
+       },
+       {
+        "name": "Char siu in the oven",
+        "note": "叉燒"
+       }
+      ]
      },
      {
-      "name": "Fermenting"
+      "name": "Fermenting",
+      "children": [
+       {
+        "name": "Kimchi"
+       },
+       {
+        "name": "Sauerkraut"
+       },
+       {
+        "name": "Kombucha"
+       },
+       {
+        "name": "Quick pickled radish"
+       }
+      ]
      },
      {
-      "name": "Stir-frying"
+      "name": "Stir-frying",
+      "children": [
+       {
+        "name": "Tomato and egg",
+        "note": "番茄炒蛋"
+       },
+       {
+        "name": "Beef with broccoli"
+       },
+       {
+        "name": "Garlic choy sum",
+        "note": "蒜蓉炒菜心"
+       }
+      ]
      },
      {
-      "name": "Braising"
+      "name": "Braising",
+      "children": [
+       {
+        "name": "Soy-braised chicken wings",
+        "note": "豉油雞翼"
+       },
+       {
+        "name": "Red-braised pork",
+        "note": "紅燒肉"
+       },
+       {
+        "name": "Osso buco"
+       }
+      ]
      },
      {
       "name": "No cooking at all"
@@ -1102,7 +1369,21 @@
       "name": "Poem",
       "children": [
        {
-        "name": "Haiku"
+        "name": "Haiku",
+        "children": [
+         {
+          "name": "The first cold morning"
+         },
+         {
+          "name": "A vending machine at night"
+         },
+         {
+          "name": "A cat on a windowsill"
+         },
+         {
+          "name": "The last day of summer"
+         }
+        ]
        },
        {
         "name": "Sonnet"
@@ -1111,7 +1392,18 @@
         "name": "Free verse"
        },
        {
-        "name": "Limerick"
+        "name": "Limerick",
+        "children": [
+         {
+          "name": "About a clumsy chef"
+         },
+         {
+          "name": "About a cat on the MTR"
+         },
+         {
+          "name": "About a sleepy dragon"
+         }
+        ]
        }
       ]
      },
@@ -1119,7 +1411,21 @@
       "name": "Story",
       "children": [
        {
-        "name": "Six-word story"
+        "name": "Six-word story",
+        "children": [
+         {
+          "name": "About a lost key"
+         },
+         {
+          "name": "About moving out"
+         },
+         {
+          "name": "About a first date"
+         },
+         {
+          "name": "About a ghost"
+         }
+        ]
        },
        {
         "name": "Flash fiction"
@@ -1142,7 +1448,18 @@
         "name": "Review of something tiny"
        },
        {
-        "name": "Letter to your past self"
+        "name": "Letter to your past self",
+        "children": [
+         {
+          "name": "You at 10"
+         },
+         {
+          "name": "You on your first day of uni"
+         },
+         {
+          "name": "You a year ago"
+         }
+        ]
        },
        {
         "name": "How-to guide"
@@ -1852,7 +2169,17 @@
       "name": "Sudoku"
      },
      {
-      "name": "Cryptic clue"
+      "name": "Cryptic clue",
+      "children": [
+       {
+        "name": "GEGS (9, 4)",
+        "note": "Answer: scrambled eggs"
+       },
+       {
+        "name": "HIJKLMNO (5)",
+        "note": "Answer: water, \"H to O\""
+       }
+      ]
      },
      {
       "name": "Rubik's cube",
@@ -2491,7 +2818,21 @@
       "name": "Write five jokes"
      },
      {
-      "name": "Try improv games"
+      "name": "Try improv games",
+      "children": [
+       {
+        "name": "Yes, and..."
+       },
+       {
+        "name": "Freeze"
+       },
+       {
+        "name": "One-word story"
+       },
+       {
+        "name": "Expert interview"
+       }
+      ]
      },
      {
       "name": "Tell an embarrassing story"
@@ -2538,7 +2879,21 @@
       "name": "Write a one-minute play"
      },
      {
-      "name": "Perform a monologue"
+      "name": "Perform a monologue",
+      "children": [
+       {
+        "name": "To be, or not to be",
+        "note": "Hamlet"
+       },
+       {
+        "name": "All the world's a stage",
+        "note": "As You Like It"
+       },
+       {
+        "name": "Tomorrow, and tomorrow, and tomorrow",
+        "note": "Macbeth"
+       }
+      ]
      },
      {
       "name": "Shadow puppetry"
@@ -2579,25 +2934,171 @@
     "hide": true,
     "children": [
      {
-      "name": "Ten words in Japanese"
+      "name": "Ten words in Japanese",
+      "children": [
+       {
+        "name": "おはよう",
+        "note": "ohayō · Good morning"
+       },
+       {
+        "name": "ありがとう",
+        "note": "arigatō · Thank you"
+       },
+       {
+        "name": "いただきます",
+        "note": "itadakimasu · Said before eating"
+       },
+       {
+        "name": "お疲れ様",
+        "note": "otsukaresama · Thanks for your hard work"
+       },
+       {
+        "name": "大丈夫",
+        "note": "daijōbu · It's okay, I'm fine"
+       },
+       {
+        "name": "美味しい",
+        "note": "oishii · Delicious"
+       },
+       {
+        "name": "かわいい",
+        "note": "kawaii · Cute"
+       },
+       {
+        "name": "乾杯",
+        "note": "kanpai · Cheers"
+       }
+      ]
      },
      {
-      "name": "A greeting in Swahili"
+      "name": "A greeting in Swahili",
+      "children": [
+       {
+        "name": "Jambo",
+        "note": "Hello"
+       },
+       {
+        "name": "Habari?",
+        "note": "How are you? (literally \"What news?\")"
+       },
+       {
+        "name": "Karibu",
+        "note": "Welcome"
+       },
+       {
+        "name": "Asante",
+        "note": "Thank you"
+       },
+       {
+        "name": "Hakuna matata",
+        "note": "No worries"
+       }
+      ]
      },
      {
-      "name": "A Cantonese slang phrase"
+      "name": "A Cantonese slang phrase",
+      "children": [
+       {
+        "name": "食花生",
+        "note": "sik6 faa1 sang1 · \"Eat peanuts\": sit back and watch the drama"
+       },
+       {
+        "name": "放飛機",
+        "note": "fong3 fei1 gei1 · \"Fly a plane\": stand someone up"
+       },
+       {
+        "name": "炒魷魚",
+        "note": "caau2 jau4 jyu4 · \"Fry squid\": get fired"
+       },
+       {
+        "name": "煲電話粥",
+        "note": "bou1 din6 waa2 zuk1 · \"Boil phone congee\": talk on the phone for ages"
+       },
+       {
+        "name": "吹水",
+        "note": "ceoi1 seoi2 · \"Blow water\": chit-chat, shoot the breeze"
+       },
+       {
+        "name": "拍拖",
+        "note": "paak3 to1 · To date someone"
+       },
+       {
+        "name": "搞掂",
+        "note": "gaau2 dim6 · Done, sorted"
+       },
+       {
+        "name": "呃like",
+        "note": "ak1 laik1 · Fishing for likes"
+       },
+       {
+        "name": "心大心細",
+        "note": "sam1 daai6 sam1 sai3 · Can't make up your mind"
+       },
+       {
+        "name": "好鬼正",
+        "note": "hou2 gwai2 zeng3 · Really awesome"
+       }
+      ]
      },
      {
-      "name": "Numbers in Korean"
+      "name": "Numbers in Korean",
+      "children": [
+       {
+        "name": "하나, 둘, 셋",
+        "note": "hana, dul, set · One, two, three (native Korean, for counting things)"
+       },
+       {
+        "name": "일, 이, 삼",
+        "note": "il, i, sam · One, two, three (Sino-Korean, for dates, money, phone numbers)"
+       }
+      ]
      },
      {
-      "name": "A French tongue twister"
+      "name": "A French tongue twister",
+      "children": [
+       {
+        "name": "Un chasseur sachant chasser doit savoir chasser sans son chien",
+        "note": "A hunter who knows how to hunt must know how to hunt without his dog"
+       },
+       {
+        "name": "Les chaussettes de l'archiduchesse sont-elles sèches, archi-sèches ?",
+        "note": "Are the archduchess's socks dry, extra dry?"
+       }
+      ]
      },
      {
-      "name": "Sign language alphabet"
+      "name": "Sign language alphabet",
+      "children": [
+       {
+        "name": "ASL fingerspelling",
+        "note": "American Sign Language"
+       },
+       {
+        "name": "BSL fingerspelling",
+        "note": "British Sign Language, uses two hands"
+       },
+       {
+        "name": "Hong Kong Sign Language numbers",
+        "note": "香港手語"
+       }
+      ]
      },
      {
-      "name": "A toast in Italian"
+      "name": "A toast in Italian",
+      "children": [
+       {
+        "name": "Salute!",
+        "note": "To your health"
+       },
+       {
+        "name": "Cin cin!",
+        "note": "Cheers"
+       },
+       {
+        "name": "Alla nostra!",
+        "note": "To us"
+       }
+      ]
      }
     ]
    },
@@ -2861,22 +3362,95 @@
     "hide": true,
     "children": [
      {
-      "name": "Sham Shui Po"
+      "name": "Sham Shui Po",
+      "children": [
+       {
+        "name": "Apliu Street",
+        "note": "鴨寮街 · Flea market and electronics"
+       },
+       {
+        "name": "Kung Wo Tofu",
+        "note": "公和荳品廠 · Tofu pudding since 1893"
+       },
+       {
+        "name": "Mei Ho House",
+        "note": "美荷樓 · Restored public housing block"
+       }
+      ]
      },
      {
-      "name": "Tai O"
+      "name": "Tai O",
+      "children": [
+       {
+        "name": "Stilt houses",
+        "note": "棚屋"
+       },
+       {
+        "name": "Pink dolphin boat trip"
+       },
+       {
+        "name": "Shrimp paste stalls",
+        "note": "蝦醬"
+       }
+      ]
      },
      {
-      "name": "Cheung Chau"
+      "name": "Cheung Chau",
+      "children": [
+       {
+        "name": "Mini Great Wall trail",
+        "note": "小長城"
+       },
+       {
+        "name": "Cheung Po Tsai Cave",
+        "note": "張保仔洞"
+       },
+       {
+        "name": "Giant fish balls"
+       }
+      ]
      },
      {
-      "name": "Sai Kung"
+      "name": "Sai Kung",
+      "children": [
+       {
+        "name": "Sharp Island tombolo",
+        "note": "橋咀洲"
+       },
+       {
+        "name": "Geopark boat tour",
+        "note": "地質公園"
+       },
+       {
+        "name": "Seafood pier"
+       }
+      ]
      },
      {
-      "name": "Lamma Island"
+      "name": "Lamma Island",
+      "children": [
+       {
+        "name": "Family Trail",
+        "note": "Yung Shue Wan to Sok Kwu Wan"
+       },
+       {
+        "name": "Tofu flower in Yung Shue Wan",
+        "note": "豆腐花"
+       }
+      ]
      },
      {
-      "name": "Tai Hang"
+      "name": "Tai Hang",
+      "children": [
+       {
+        "name": "Lin Fa Kung temple",
+        "note": "蓮花宮"
+       },
+       {
+        "name": "Fire Dragon Heritage Centre",
+        "note": "大坑火龍文化館"
+       }
+      ]
      },
      {
       "name": "Kennedy Town"
@@ -2885,7 +3459,17 @@
       "name": "Peng Chau"
      },
      {
-      "name": "Lai Chi Wo"
+      "name": "Lai Chi Wo",
+      "children": [
+       {
+        "name": "Hakka walled village",
+        "note": "荔枝窩客家圍村"
+       },
+       {
+        "name": "Fung shui woodland",
+        "note": "風水林"
+       }
+      ]
      }
     ]
    },
@@ -2979,25 +3563,32 @@
     "hide": true,
     "children": [
      {
-      "name": "Egg waffles"
+      "name": "Egg waffles",
+      "note": "雞蛋仔 · gai1 daan6 zai2"
      },
      {
-      "name": "Curry fish balls"
+      "name": "Curry fish balls",
+      "note": "咖喱魚蛋 · gaa3 lei1 jyu4 daan2"
      },
      {
-      "name": "Siu mai"
+      "name": "Siu mai",
+      "note": "燒賣 · siu1 maai2"
      },
      {
-      "name": "Stinky tofu"
+      "name": "Stinky tofu",
+      "note": "臭豆腐 · cau3 dau6 fu6"
      },
      {
-      "name": "Pineapple bun with butter"
+      "name": "Pineapple bun with butter",
+      "note": "菠蘿油 · bo1 lo4 jau4"
      },
      {
-      "name": "Cheung fun"
+      "name": "Cheung fun",
+      "note": "腸粉 · Rice noodle rolls"
      },
      {
-      "name": "Milk tea"
+      "name": "Milk tea",
+      "note": "奶茶 · Hong Kong-style milk tea"
      }
     ]
    },
@@ -3400,19 +3991,89 @@
       "name": "A graphic liner"
      },
      {
-      "name": "A new hairstyle"
+      "name": "A new hairstyle",
+      "children": [
+       {
+        "name": "Space buns"
+       },
+       {
+        "name": "Low messy bun"
+       },
+       {
+        "name": "Half-up top knot"
+       },
+       {
+        "name": "Braided crown"
+       },
+       {
+        "name": "Slicked-back low ponytail"
+       }
+      ]
      },
      {
       "name": "A face mask night"
      },
      {
-      "name": "Nail art"
+      "name": "Nail art",
+      "children": [
+       {
+        "name": "French tips in a bright colour"
+       },
+       {
+        "name": "Tiny smiley faces"
+       },
+       {
+        "name": "Chrome nails"
+       },
+       {
+        "name": "Tortoiseshell"
+       },
+       {
+        "name": "One accent nail with glitter"
+       }
+      ]
      },
      {
-      "name": "A fragrance layering test"
+      "name": "A fragrance layering test",
+      "children": [
+       {
+        "name": "Vanilla and sandalwood"
+       },
+       {
+        "name": "Citrus and vetiver"
+       },
+       {
+        "name": "Rose and oud"
+       },
+       {
+        "name": "Fig and cedar"
+       }
+      ]
      },
      {
-      "name": "A skincare routine reset"
+      "name": "A skincare routine reset",
+      "children": [
+       {
+        "name": "Three-step week",
+        "note": "Cleanser, moisturiser, SPF in the morning. Nothing else for 7 days"
+       },
+       {
+        "name": "Night double cleanse",
+        "note": "Oil cleanser, then a gentle cleanser, then moisturiser"
+       },
+       {
+        "name": "Fragrance-free week",
+        "note": "Swap everything for fragrance-free basics and see how your skin feels"
+       },
+       {
+        "name": "Patch-test one new product",
+        "note": "Test it on a small patch of skin for a few days before your face"
+       },
+       {
+        "name": "Hydration focus",
+        "note": "Hydrating toner, then a hyaluronic serum, then moisturiser"
+       }
+      ]
      }
     ]
    },
@@ -4220,22 +4881,130 @@
     "hide": true,
     "children": [
      {
-      "name": "A Cantopop classic"
+      "name": "A Cantopop classic",
+      "children": [
+       {
+        "name": "海闊天空",
+        "note": "Beyond · Boundless Oceans, Vast Skies"
+       },
+       {
+        "name": "喜歡你",
+        "note": "Beyond · I Like You"
+       },
+       {
+        "name": "富士山下",
+        "note": "Eason Chan · Under Mount Fuji"
+       },
+       {
+        "name": "浮誇",
+        "note": "Eason Chan · Exaggerated"
+       },
+       {
+        "name": "紅日",
+        "note": "Hacken Lee · Red Sun"
+       },
+       {
+        "name": "千千闕歌",
+        "note": "Priscilla Chan · A Thousand Songs"
+       }
+      ]
      },
      {
-      "name": "A power ballad"
+      "name": "A power ballad",
+      "children": [
+       {
+        "name": "I Will Always Love You",
+        "note": "Whitney Houston"
+       },
+       {
+        "name": "Total Eclipse of the Heart",
+        "note": "Bonnie Tyler"
+       },
+       {
+        "name": "My Heart Will Go On",
+        "note": "Céline Dion"
+       },
+       {
+        "name": "Bohemian Rhapsody",
+        "note": "Queen"
+       }
+      ]
      },
      {
-      "name": "A duet"
+      "name": "A duet",
+      "children": [
+       {
+        "name": "Shallow",
+        "note": "Lady Gaga and Bradley Cooper"
+       },
+       {
+        "name": "Don't Go Breaking My Heart",
+        "note": "Elton John and Kiki Dee"
+       },
+       {
+        "name": "A Whole New World",
+        "note": "Aladdin"
+       }
+      ]
      },
      {
-      "name": "A rap verse"
+      "name": "A rap verse",
+      "children": [
+       {
+        "name": "Lose Yourself",
+        "note": "Eminem"
+       },
+       {
+        "name": "Juicy",
+        "note": "The Notorious B.I.G."
+       },
+       {
+        "name": "Rapper's Delight",
+        "note": "The Sugarhill Gang"
+       }
+      ]
      },
      {
-      "name": "A Disney song"
+      "name": "A Disney song",
+      "children": [
+       {
+        "name": "Let It Go",
+        "note": "Frozen"
+       },
+       {
+        "name": "How Far I'll Go",
+        "note": "Moana"
+       },
+       {
+        "name": "Under the Sea",
+        "note": "The Little Mermaid"
+       },
+       {
+        "name": "We Don't Talk About Bruno",
+        "note": "Encanto"
+       }
+      ]
      },
      {
-      "name": "A song in a language you don't speak"
+      "name": "A song in a language you don't speak",
+      "children": [
+       {
+        "name": "Despacito",
+        "note": "Spanish · Luis Fonsi"
+       },
+       {
+        "name": "Gangnam Style",
+        "note": "Korean · PSY"
+       },
+       {
+        "name": "Plastic Love",
+        "note": "Japanese · Mariya Takeuchi"
+       },
+       {
+        "name": "La Vie en rose",
+        "note": "French · Édith Piaf"
+       }
+      ]
      }
     ]
    },
@@ -4529,13 +5298,37 @@
     "hide": true,
     "children": [
      {
-      "name": "HIIT"
+      "name": "HIIT",
+      "children": [
+       {
+        "name": "Tabata",
+        "note": "20 s on, 10 s off, 8 rounds"
+       },
+       {
+        "name": "EMOM",
+        "note": "10 squats every minute for 10 minutes"
+       },
+       {
+        "name": "30-30",
+        "note": "30 s jumping jacks, 30 s rest, 10 rounds"
+       }
+      ]
      },
      {
       "name": "Kettlebell"
      },
      {
-      "name": "Bodyweight circuit"
+      "name": "Bodyweight circuit",
+      "children": [
+       {
+        "name": "20 squats, 10 push-ups, 30 s plank",
+        "note": "3 rounds"
+       },
+       {
+        "name": "10 lunges each leg, 15 glute bridges, 20 mountain climbers",
+        "note": "3 rounds"
+       }
+      ]
      },
      {
       "name": "Stair climb"
@@ -4647,10 +5440,26 @@
       "name": "5 km"
      },
      {
-      "name": "Intervals"
+      "name": "Intervals",
+      "children": [
+       {
+        "name": "6 × 400 m",
+        "note": "90 s walk between"
+       },
+       {
+        "name": "10 × 1 min fast",
+        "note": "1 min easy between"
+       }
+      ]
      },
      {
-      "name": "Hill repeats"
+      "name": "Hill repeats",
+      "children": [
+       {
+        "name": "8 × 30 s uphill",
+        "note": "Walk back down"
+       }
+      ]
      },
      {
       "name": "Slow long run"
@@ -4835,7 +5644,21 @@
     "hide": true,
     "children": [
      {
-      "name": "A digital detox hour"
+      "name": "A digital detox hour",
+      "children": [
+       {
+        "name": "Phone in a drawer, read a paper book"
+       },
+       {
+        "name": "Walk with no headphones"
+       },
+       {
+        "name": "Write a letter by hand"
+       },
+       {
+        "name": "Sketch whatever is in front of you"
+       }
+      ]
      },
      {
       "name": "A long bath"
@@ -4847,10 +5670,43 @@
       "name": "An early night"
      },
      {
-      "name": "Cook yourself something nice"
+      "name": "Cook yourself something nice",
+      "children": [
+       {
+        "name": "Tomato and egg on rice",
+        "note": "番茄炒蛋飯"
+       },
+       {
+        "name": "Instant noodles with a soft egg and spring onion"
+       },
+       {
+        "name": "Kaya butter toast",
+        "note": "咖央牛油多"
+       },
+       {
+        "name": "Miso soup with tofu"
+       },
+       {
+        "name": "Avocado toast with chilli flakes"
+       }
+      ]
      },
      {
-      "name": "Tidy one drawer"
+      "name": "Tidy one drawer",
+      "children": [
+       {
+        "name": "The kitchen junk drawer"
+       },
+       {
+        "name": "Your bedside drawer"
+       },
+       {
+        "name": "The cable and charger drawer"
+       },
+       {
+        "name": "Your make-up bag"
+       }
+      ]
      }
     ]
    },
@@ -5014,7 +5870,21 @@
       "name": "Charades"
      },
      {
-      "name": "Two truths and a lie"
+      "name": "Two truths and a lie",
+      "children": [
+       {
+        "name": "About your childhood"
+       },
+       {
+        "name": "About food"
+       },
+       {
+        "name": "About travel"
+       },
+       {
+        "name": "About school"
+       }
+      ]
      },
      {
       "name": "Mafia"
@@ -5042,7 +5912,24 @@
       "name": "The hat game"
      },
      {
-      "name": "Would you rather"
+      "name": "Would you rather",
+      "children": [
+       {
+        "name": "Always be 10 minutes late, or always 20 minutes early?"
+       },
+       {
+        "name": "Fight one horse-sized duck, or 100 duck-sized horses?"
+       },
+       {
+        "name": "Lose your phone, or lose your wallet?"
+       },
+       {
+        "name": "Only eat Cantonese food, or never eat it again?"
+       },
+       {
+        "name": "Read minds, or be invisible?"
+       }
+      ]
      }
     ]
    },
@@ -5262,13 +6149,43 @@
     "hide": true,
     "children": [
      {
-      "name": "A coin vanish"
+      "name": "A coin vanish",
+      "children": [
+       {
+        "name": "French drop"
+       },
+       {
+        "name": "Classic palm"
+       },
+       {
+        "name": "Retention vanish"
+       }
+      ]
      },
      {
-      "name": "A card force"
+      "name": "A card force",
+      "children": [
+       {
+        "name": "Cross-cut force"
+       },
+       {
+        "name": "Hindu shuffle force"
+       },
+       {
+        "name": "Riffle force"
+       }
+      ]
      },
      {
-      "name": "A mind-reading trick"
+      "name": "A mind-reading trick",
+      "children": [
+       {
+        "name": "The 21-card trick"
+       },
+       {
+        "name": "A book test"
+       }
+      ]
      },
      {
       "name": "A rope trick"
@@ -5347,10 +6264,29 @@
     "hide": true,
     "children": [
      {
-      "name": "Memorise a poem"
+      "name": "Memorise a poem",
+      "children": [
+       {
+        "name": "靜夜思",
+        "note": "Li Bai · Quiet Night Thought: \"Before my bed, the bright moonlight\""
+       },
+       {
+        "name": "Stopping by Woods on a Snowy Evening",
+        "note": "Robert Frost"
+       },
+       {
+        "name": "Do not go gentle into that good night",
+        "note": "Dylan Thomas"
+       }
+      ]
      },
      {
-      "name": "Learn pi to 20 digits"
+      "name": "Learn pi to 20 digits",
+      "children": [
+       {
+        "name": "3.14159265358979323846"
+       }
+      ]
      },
      {
       "name": "Remember a shopping list"
@@ -5787,10 +6723,35 @@
       "name": "Touch typing"
      },
      {
-      "name": "Knot tying"
+      "name": "Knot tying",
+      "children": [
+       {
+        "name": "Bowline"
+       },
+       {
+        "name": "Reef knot"
+       },
+       {
+        "name": "Clove hitch"
+       },
+       {
+        "name": "Figure-eight knot"
+       }
+      ]
      },
      {
-      "name": "Basic first aid"
+      "name": "Basic first aid",
+      "children": [
+       {
+        "name": "Recovery position"
+       },
+       {
+        "name": "Cool a minor burn under running water for 20 minutes"
+       },
+       {
+        "name": "Find your nearest defibrillator"
+       }
+      ]
      },
      {
       "name": "Changing a tyre"
@@ -6202,7 +7163,25 @@
       "name": "Read one artist"
      },
      {
-      "name": "Recreate a famous piece"
+      "name": "Recreate a famous piece",
+      "children": [
+       {
+        "name": "The Great Wave off Kanagawa",
+        "note": "Hokusai"
+       },
+       {
+        "name": "The Starry Night",
+        "note": "Van Gogh"
+       },
+       {
+        "name": "The Son of Man",
+        "note": "Magritte"
+       },
+       {
+        "name": "Campbell's Soup Cans",
+        "note": "Warhol"
+       }
+      ]
      }
     ]
    }

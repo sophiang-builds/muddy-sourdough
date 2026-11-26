@@ -326,21 +326,36 @@ def parse_compact(path):
     return cats
 
 def attach_exact(data, path):
-    """Category > Item: exact; exact  ->  adds the exact names as children of that item."""
+    """Two line kinds:
+    Category > Item: Name | note; Name     adds children under that item (note optional)
+    Category > Item = note                 adds a note (translation, romanisation) to the item
+    """
     missing = []
     for line in path.read_text().splitlines():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        head, items = line.split(":", 1)
-        cat, item = [x.strip() for x in head.split(">")]
-        exact = [{"name": x.strip()} for x in items.split(";") if x.strip()]
+        is_note = " = " in line and (":" not in line or line.index(" = ") < line.index(":"))
+        head, rest = line.split(" = ", 1) if is_note else line.split(":", 1)
+        cat, item = [x.strip() for x in head.split(">", 1)]
+        kids = []
+        for x in rest.split(";"):
+            if not x.strip():
+                continue
+            name, _, note = x.partition("|")
+            kid = {"name": name.strip()}
+            if note.strip():
+                kid["note"] = note.strip()
+            kids.append(kid)
         found = 0
         def walk(n):
             nonlocal found
             for k in n.get("children", []):
-                if k["name"].lower() == item.lower() and "children" not in k:
-                    k["children"] = exact; found += 1
+                if k["name"].lower() == item.lower():
+                    if is_note:
+                        k["note"] = rest.strip(); found += 1
+                    elif "children" not in k:
+                        k["children"] = kids; found += 1
                 walk(k)
         for c in data:
             if c["name"] == cat:
@@ -348,13 +363,14 @@ def attach_exact(data, path):
         if not found:
             missing.append(f"{cat} > {item}")
     if missing:
-        print("Not found (check spelling):", "; ".join(missing))
+        print(f"{path.name}: not found (check spelling):", "; ".join(missing))
     return data
 
 if __name__ == "__main__":
     data = [strip(n) for n in parse(TREE)]
     data += parse_compact(pathlib.Path(__file__).with_name("more_categories.txt"))
     data = attach_exact(data, pathlib.Path(__file__).with_name("exact_items.txt"))
+    data = attach_exact(data, pathlib.Path(__file__).with_name("deeper_items.txt"))
     names = [c["name"] for c in data]
     dupes = {n for n in names if names.count(n) > 1}
     assert not dupes, f"duplicate categories: {dupes}"
