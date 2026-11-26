@@ -14,7 +14,7 @@
    COLOUR cream ground with peach, lilac and jomud blue light behind the glass; blue for the one action
    TYPE SF Pro on iPhone (system-ui), Inter as the stand-in elsewhere
    LAYOUT phone: tiny title, squares and Pick centred, count switch above the home bar; wider: the same screen inside an iPhone 15 frame */
-:root{color-scheme:light dark;--bg:light-dark(#FBF5EE,#0A0E1F);--ink:light-dark(#16181D,#F2F4F8);--muted:light-dark(rgba(22,24,29,.55),rgba(242,244,248,.6));--brand:light-dark(#0F66DB,#3D86F5);--peach:#F07A3A;--lilac:#7A3FE0;--rose:#E8506A;--sky:#3273F2;--gfill:light-dark(rgba(255,255,255,.22),rgba(255,255,255,.07));--ghi:light-dark(rgba(255,255,255,.9),rgba(255,255,255,.38));--glo:light-dark(rgba(255,255,255,.35),rgba(255,255,255,.1));--gshadow:light-dark(rgba(40,25,80,.22),rgba(0,0,0,.5));--blob:light-dark(.85,.55);--stage:light-dark(#E9E6EF,#05070F)}
+:root{color-scheme:light dark;--bg:light-dark(#FBF5EE,#0A0E1F);--ink:light-dark(#16181D,#F2F4F8);--muted:light-dark(rgba(22,24,29,.55),rgba(242,244,248,.6));--brand:light-dark(#0F66DB,#3D86F5);--peach:#F07A3A;--lilac:#7A3FE0;--rose:#E8506A;--sky:#3273F2;--gfill:light-dark(rgba(255,255,255,.4),rgba(255,255,255,.1));--ghi:light-dark(rgba(255,255,255,.9),rgba(255,255,255,.38));--glo:light-dark(rgba(255,255,255,.35),rgba(255,255,255,.1));--gshadow:light-dark(rgba(40,25,80,.22),rgba(0,0,0,.5));--blob:light-dark(1,.8);--stage:light-dark(#E9E6EF,#05070F)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html,body{height:100%}
@@ -37,12 +37,12 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 }
 
 /* colour wash behind the glass */
-.wash{position:absolute;inset:-20%;pointer-events:none;opacity:var(--blob)}
-.wash i{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
-.wash i:nth-child(1){left:-6%;top:12%;background:radial-gradient(closest-side,var(--peach),transparent)}
-.wash i:nth-child(2){right:-4%;top:28%;background:radial-gradient(closest-side,var(--lilac),transparent)}
-.wash i:nth-child(3){left:14%;bottom:10%;background:radial-gradient(closest-side,var(--sky),transparent)}
-.wash i:nth-child(4){right:10%;top:2%;width:40%;background:radial-gradient(closest-side,var(--rose),transparent)}
+.wash{position:absolute;inset:-20%;background:light-dark(#F6D9C6,#1A1238);pointer-events:none;opacity:var(--blob)}
+.wash i{position:absolute;width:72%;aspect-ratio:1;border-radius:50%;transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
+.wash i:nth-child(1){left:-6%;top:12%;background:radial-gradient(closest-side,var(--peach) 35%,transparent)}
+.wash i:nth-child(2){right:-4%;top:28%;background:radial-gradient(closest-side,var(--lilac) 35%,transparent)}
+.wash i:nth-child(3){left:14%;bottom:10%;background:radial-gradient(closest-side,var(--sky) 35%,transparent)}
+.wash i:nth-child(4){right:10%;top:2%;width:40%;background:radial-gradient(closest-side,var(--rose) 35%,transparent)}
 
 /* Liquid Glass */
 .glass{position:relative;isolation:isolate;background:var(--gfill);-webkit-backdrop-filter:blur(22px) saturate(185%);backdrop-filter:blur(22px) saturate(185%);box-shadow:inset 0 1.5px 0 var(--ghi),inset 1.5px 0 0 var(--glo),inset -1px 0 0 var(--glo),inset 0 -1px 0 var(--glo),0 18px 40px -14px var(--gshadow);transition:transform .35s cubic-bezier(.3,1.5,.5,1),background .2s}
@@ -53,23 +53,25 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 .title{position:relative;z-index:2;margin:calc(var(--top) + 10px) 0 0;text-align:center;font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--muted)}
 .title{color:var(--ink)}
 .title svg{width:21px;height:21px;vertical-align:-5px;margin:0 0 0 2px}
-.middle{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;padding:0 20px}
-.slots{width:100%;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:12px;transition:width .4s}
-.slots[data-n="1"]{width:86%}
-.cell{container-type:inline-size}
-.sq{position:relative;width:100%;aspect-ratio:1;border-radius:clamp(22px,11cqw,34px);display:flex;flex-direction:column;padding:9cqw;text-align:left;animation:pop .5s cubic-bezier(.3,1.5,.5,1)}
-.slots[data-n="1"] .sq{border-radius:38px}
+.middle{position:relative;z-index:2;flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:22px 20px 26px}
+.slots{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px;min-height:0}
+.slots[data-n="2"],.slots[data-n="3"]{flex:1}
+.cell{container-type:size;width:100%;min-height:0;display:flex;justify-content:center}
+.slots[data-n="1"] .cell{width:min(86%,340px);aspect-ratio:1}
+.slots[data-n="2"] .cell,.slots[data-n="3"] .cell{flex:1}
+.sq{position:relative;width:100%;height:100%;border-radius:clamp(22px,11cqmin,38px);display:flex;flex-direction:column;padding:9cqmin;text-align:left;animation:pop .5s cubic-bezier(.3,1.5,.5,1)}
+.slots[data-n="2"] .sq{width:auto;aspect-ratio:1}
+.slots[data-n="3"] .sq{border-radius:30px;padding:clamp(16px,11cqmin,24px) 22px}
 @keyframes pop{from{transform:scale(.6);opacity:0}}
-.cap{font-size:clamp(10px,5.4cqw,14px);font-weight:600;color:var(--muted);line-height:1.25;display:flex;gap:6px;justify-content:space-between}
-.cap span{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.big{flex:1;display:flex;align-items:safe center;font-weight:600;font-size:clamp(14px,12cqw,40px);line-height:1.08;letter-spacing:-.02em;hyphens:auto;overflow-wrap:break-word;overflow:hidden}
+.cap{font-size:clamp(11px,5.4cqmin,14px);font-weight:600;color:var(--muted);line-height:1.25;display:flex;gap:6px;justify-content:space-between}
+.cap span{flex:1;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.slots[data-n="3"] .cap span{-webkit-line-clamp:1}
+.big{flex:1;display:flex;align-items:safe center;font-weight:600;font-size:clamp(16px,12cqmin,40px);line-height:1.08;letter-spacing:-.02em;hyphens:auto;overflow-wrap:break-word;overflow:hidden}
+.slots[data-n="3"] .big{font-size:clamp(18px,14cqmin,28px)}
 .big.tick{animation:roll .09s ease-out}
 @keyframes roll{from{transform:translateY(-35%);opacity:.2;filter:blur(1.5px)}}
-.foot{position:absolute;right:7cqw;bottom:6cqw;height:clamp(12px,7cqw,18px);color:var(--muted)}
-.slots[data-n="3"] .sq{padding:9cqw 8cqw}
-.slots[data-n="3"] .cap span{-webkit-line-clamp:1}
-.slots[data-n="3"] .cap .f{display:none}
-.slots[data-n="3"] .big{font-size:13.5px;line-height:1.15;letter-spacing:-.01em}
+.foot{position:absolute;right:7cqmin;bottom:6cqmin;height:clamp(12px,7cqmin,18px);color:var(--muted)}
+.slots[data-n="3"] .foot{right:20px;bottom:14px}
 .foot svg{height:100%;width:auto}
 .sq.nope{animation:nope .4s}
 @keyframes nope{25%{transform:translateX(-6px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
@@ -77,7 +79,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
 .count{position:relative;z-index:2;align-self:center;margin-bottom:calc(var(--bot) + 18px);display:flex;padding:4px;gap:2px;border-radius:24px}
 .count button{width:54px;height:40px;border-radius:20px;display:grid;place-items:center;color:var(--muted);transition:background .25s,color .25s}
 .count button[aria-pressed=true]{background:light-dark(rgba(255,255,255,.75),rgba(255,255,255,.18));color:var(--ink)}
-.count svg{height:12px;fill:currentColor}
+.count svg{height:20px;fill:currentColor}
 :focus-visible{outline:3px solid color-mix(in srgb,var(--brand) 55%,transparent);outline-offset:3px}
 
 /* category sheet */
@@ -114,9 +116,9 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
       </div>
 
       <div class="glass count" id="count" role="group" aria-label="How many picks">
-        <button data-n="1" aria-label="One square"><svg viewBox="0 0 12 12"><rect width="12" height="12" rx="3"/></svg></button>
-        <button data-n="2" aria-label="Two squares"><svg viewBox="0 0 26 12"><rect width="12" height="12" rx="3"/><rect x="14" width="12" height="12" rx="3"/></svg></button>
-        <button data-n="3" aria-label="Three squares"><svg viewBox="0 0 40 12"><rect width="12" height="12" rx="3"/><rect x="14" width="12" height="12" rx="3"/><rect x="28" width="12" height="12" rx="3"/></svg></button>
+        <button data-n="1" aria-label="One square"><svg viewBox="0 0 12 24"><rect y="6" width="12" height="12" rx="3"/></svg></button>
+        <button data-n="2" aria-label="Two squares"><svg viewBox="0 0 12 24"><rect x="1" y="1" width="10" height="10" rx="2.5"/><rect x="1" y="13" width="10" height="10" rx="2.5"/></svg></button>
+        <button data-n="3" aria-label="Three squares"><svg viewBox="0 0 16 24"><rect width="16" height="7" rx="2"/><rect y="8.5" width="16" height="7" rx="2"/><rect y="17" width="16" height="7" rx="2"/></svg></button>
       </div>
       <div class="homebar"></div>
       <div id="sheetHost"></div>
@@ -159,7 +161,7 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:poin
     if (!s.path) return `<button class="glass press sq" data-i="${i}" aria-label="Empty square ${i + 1}"><div class="cap">${s.lock ? `<span>${esc(s.lock)}</span>${ICON_LOCK}` : ""}</div><div class="big"></div><div class="foot"></div></button>`;
     const p = s.path, last = p[p.length - 1], trail = p.slice(0, -1).map(n => n.name).join(" · ");
     const capTxt = `${esc(p[0].name)}<span class="f">${p.length > 2 ? " · " + p.slice(1, -1).map(n => esc(n.name)).join(" · ") : ""}</span>`;
-    return `<button class="glass press sq" data-i="${i}" aria-label="${esc(trail + ": " + last.name)}"><div class="cap"><span>${capTxt}</span>${s.lock ? ICON_LOCK : ""}</div><div class="big">${esc(last.name)}</div><div class="foot">${last.children ? ICON_DEEPER : ""}</div></button>`;
+    return `<button class="glass press sq" data-i="${i}" aria-label="${esc(trail + ": " + last.name)}"><div class="cap"><span>${esc(trail)}</span>${s.lock ? ICON_LOCK : ""}</div><div class="big">${esc(last.name)}</div><div class="foot">${last.children ? ICON_DEEPER : ""}</div></button>`;
   };
 
   const render = () => {

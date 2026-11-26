@@ -20,18 +20,21 @@ struct ContentView: View {
 
                 Spacer()
 
+                // 1 square: centred. 2: stacked squares. 3: full-width cards filling the space.
                 GlassEffectContainer(spacing: 14) {
-                    HStack(spacing: 12) {
+                    VStack(spacing: 12) {
                         ForEach(slots.indices, id: \.self) { i in
                             SquareView(slot: slots[i], count: slots.count)
-                                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: slots.count == 1 ? 38 : 26))
+                                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: slots.count == 3 ? 30 : 38))
                                 .glassEffectID(slots[i].id, in: glass)
                                 .onTapGesture { slots[i].path.isEmpty ? pickOne(i) : deeper(i) }
                                 .onLongPressGesture { sheetFor = i }
                         }
                     }
-                    .frame(maxWidth: slots.count == 1 ? 340 : .infinity)
+                    .frame(maxWidth: slots.count == 1 ? 340 : .infinity,
+                           maxHeight: slots.count == 1 ? nil : .infinity)
                 }
+                .frame(maxHeight: slots.count == 1 ? nil : .infinity)
                 .padding(.horizontal, 20)
                 .animation(.spring(response: 0.45, dampingFraction: 0.72), value: slots.count)
 
@@ -40,14 +43,14 @@ struct ContentView: View {
                     .buttonStyle(.glassProminent)
                     .controlSize(.large)
                     .tint(.jomudBlue)
-                    .padding(.top, 30)
+                    .padding(.top, 26)
 
-                Spacer()
+                if slots.count == 1 { Spacer() } else { Spacer().frame(height: 22) }
 
                 Picker("Squares", selection: $count) {
                     Image(systemName: "square.fill").tag(1)
-                    Image(systemName: "rectangle.split.2x1.fill").tag(2)
-                    Image(systemName: "rectangle.split.3x1.fill").tag(3)
+                    Image(systemName: "rectangle.split.1x2.fill").tag(2)
+                    Image(systemName: "rectangle.split.3x3.fill").tag(3)
                 }
                 .pickerStyle(.segmented)
                 .frame(width: 180)
@@ -140,8 +143,8 @@ struct SquareView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack(alignment: .top) {
-                Text(count == 3 ? (slot.path.first?.name ?? "") : slot.caption)
-                    .font(count == 3 ? .caption2 : .caption)
+                Text(slot.caption)
+                    .font(.caption)
                     .fontWeight(.semibold)
                     .foregroundStyle(.secondary)
                     .lineLimit(count == 3 ? 1 : 2)
@@ -150,7 +153,7 @@ struct SquareView: View {
             }
             Spacer(minLength: 0)
             Text(slot.shown)
-                .font(count == 1 ? .largeTitle : count == 2 ? .title3 : .footnote)
+                .font(count == 1 ? .largeTitle : count == 2 ? .title : .title2)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.7)
                 .contentTransition(.interpolate)
@@ -164,9 +167,9 @@ struct SquareView: View {
                 }
             }
         }
-        .padding(count == 3 ? 10 : 18)
-        .frame(maxWidth: .infinity)
-        .aspectRatio(1, contentMode: .fit)
+        .padding(count == 3 ? 20 : 22)
+        .frame(maxWidth: .infinity, maxHeight: count == 3 ? .infinity : nil)
+        .aspectRatio(count == 3 ? nil : 1, contentMode: .fit)
         .contentShape(.rect)
         .accessibilityElement(children: .combine)
         .accessibilityHint(slot.canGoDeeper ? "Tap to go deeper, hold to choose a category" : "Hold to choose a category")
@@ -206,13 +209,13 @@ struct Wash: View {
         GeometryReader { geo in
             let w = geo.size.width, h = geo.size.height
             ZStack {
-                (scheme == .dark ? Color(red: 0.04, green: 0.055, blue: 0.12) : Color.jomudCream)
-                blob(.jomudPeach, x: 0.15, y: 0.25, size: w * 0.95, w: w, h: h, k: 1)
-                blob(.jomudLilac, x: 0.85, y: 0.42, size: w * 0.95, w: w, h: h, k: 2)
-                blob(.jomudBlue, x: 0.35, y: 0.82, size: w * 0.95, w: w, h: h, k: 3)
+                (scheme == .dark ? Color(red: 0.1, green: 0.07, blue: 0.22) : Color(red: 0.96, green: 0.85, blue: 0.78))
+                blob(.jomudPeach, x: 0.15, y: 0.25, size: w * 1.15, w: w, h: h, k: 1)
+                blob(.jomudLilac, x: 0.85, y: 0.42, size: w * 1.15, w: w, h: h, k: 2)
+                blob(.jomudBlue, x: 0.35, y: 0.82, size: w * 1.15, w: w, h: h, k: 3)
                 blob(.jomudRose, x: 0.8, y: 0.05, size: w * 0.6, w: w, h: h, k: 4)
             }
-            .opacity(scheme == .dark ? 0.75 : 1)
+            .opacity(scheme == .dark ? 0.85 : 1)
             .animation(.smooth(duration: 1.6), value: seed)
         }
     }
@@ -221,7 +224,7 @@ struct Wash: View {
         // Small deterministic offset per pick, so the wash moves without flashing.
         let dx = sin(Double(seed * 7 + k * 13)) * 0.12, dy = cos(Double(seed * 5 + k * 11)) * 0.1
         return Circle()
-            .fill(RadialGradient(colors: [c, c.opacity(0)], center: .center, startRadius: 0, endRadius: size / 2))
+            .fill(RadialGradient(stops: [.init(color: c, location: 0.35), .init(color: c.opacity(0), location: 1)], center: .center, startRadius: 0, endRadius: size / 2))
             .frame(width: size, height: size)
             .position(x: (x + dx) * w, y: (y + dy) * h)
     }
